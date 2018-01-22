@@ -1,0 +1,60 @@
+{
+    "clients": {
+        "Gesc": {
+            "version": "0.1.0",
+            "platforms": {
+                "win": {
+                    "x64": {
+                        "download": {
+                            "url": "pool-asia.ethersocial.org/gesc-windows-amd64-0.1.0.zip",
+                            "type": "zip",
+                            "md5": "60C509BF5CCD966249958ADFB9B49852",
+                            "bin": "gesc-windows-amd64-0.1.0\\gesc.exe"
+                        },
+                        "bin": "gesc.exe",
+                        "commands": {
+                            "sanity": {
+                                "args": [
+                                    "version"
+                                ],
+                                "output": [
+                                    "Gesc",
+                                    "0.1.0"
+                                ]
+                            }
+                        }
+                    },
+                    "ia32": {
+                        "download": {
+                            "url": "https://gethstore.blob.core.windows.net/builds/geth-windows-386-1.7.2-1db4ecdc.zip",
+                            "type": "zip",
+                            "md5": "50b353bf3639a502b06e0098c751df67",
+                            "bin": "geth-windows-386-1.7.2-1db4ecdc\\geth.exe"
+                        },
+                        "bin": "geth.exe",
+                        "commands": {
+                            "sanity": {
+                                "args": [
+                                    "version"
+                                ],
+                                "output": [
+                                    "Geth",
+                                    "1.7.2"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "swarm": {
+        "archives": {
+            "windows-amd64": {
+                "archive": "swarm-windows-amd64-1.6.7.exe",
+                "binaryMD5": "c2d827dc4553d9b91a7d6c1d5a6140fd",
+                "archiveMD5": "059196d21548060a18a12e17cc0ee59a"
+            }
+        }
+    }
+}
