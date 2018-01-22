@@ -37,7 +37,7 @@
                 }
             },
             "error": {
-                "wrongChain": "間違ったチェーン上にいます。EtherSocial Wallet App を再起動して下さい。"
+                "wrongChain": "ESC Wallet App を再起動して下さい。"
             },
             "warnings": {
                 "txOriginVulnerabilityWallet": "このスマート契約財布は、古いコードを持っており、フィッシング攻撃の対象となります。",

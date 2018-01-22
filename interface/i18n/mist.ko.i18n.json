@@ -62,7 +62,8 @@
             },
             "help": {
                 "label": "도움말",
-                "reportBug": "깃허브에 이슈 리포트"
+                "mistWiki": "ESC 위키",
+                "reportBug": "이슈 리포트 보고하기"
             }
         },
         "errors": {

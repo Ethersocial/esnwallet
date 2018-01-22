@@ -655,11 +655,6 @@ let menuTempl = function (webviews) {
             shell.openExternal('https://github.com/ethersocial/escwallet/wiki');
         },
     }, {
-        label: i18n.t('mist.applicationMenu.help.gitter'),
-        click() {
-            shell.openExternal('https://gitter.im/ethersocial/mist');
-        },
-    }, {
         label: i18n.t('mist.applicationMenu.help.reportBug'),
         click() {
             shell.openExternal('https://github.com/ethersocial/escwallet/issues');
