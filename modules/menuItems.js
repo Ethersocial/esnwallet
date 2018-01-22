@@ -652,7 +652,7 @@ let menuTempl = function (webviews) {
     helpMenu.push({
         label: i18n.t('mist.applicationMenu.help.mistWiki'),
         click() {
-            shell.openExternal('https://github.com/ethersocial/ethersocialwallet/wiki');
+            shell.openExternal('https://github.com/ethersocial/escwallet/wiki');
         },
     }, {
         label: i18n.t('mist.applicationMenu.help.gitter'),
@@ -662,7 +662,7 @@ let menuTempl = function (webviews) {
     }, {
         label: i18n.t('mist.applicationMenu.help.reportBug'),
         click() {
-            shell.openExternal('https://github.com/ethersocial/ethersocialwallet/issues');
+            shell.openExternal('https://github.com/ethersocial/escwallet/issues');
         },
     });
 

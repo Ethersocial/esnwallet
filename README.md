@@ -1,8 +1,8 @@
 # EtherSocialWallet
 
-[![Join the chat at https://gitter.im/ethersocial/ethersocialwallet](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethersocial/ethersocialwallet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status develop branch](https://travis-ci.org/ethersocial/ethersocialwallet.svg?branch=master)](https://travis-ci.org/ethersocial/ethersocialwallet)
-[![Code Climate](https://codeclimate.com/github/ethersocial/ethersocialwallet/badges/gpa.svg)](https://codeclimate.com/github/ethersocial/ethersocialwallet)
+[![Join the chat at https://gitter.im/ethersocial/escwallet](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethersocial/escwallet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status develop branch](https://travis-ci.org/ethersocial/escwallet.svg?branch=master)](https://travis-ci.org/ethersocial/escwallet)
+[![Code Climate](https://codeclimate.com/github/ethersocial/escwallet/badges/gpa.svg)](https://codeclimate.com/github/ethersocial/escwallet)
 
 The Mist browser is the tool of choice to browse and use Ðapps.
 
@@ -12,13 +12,13 @@ Please note that this repository is the Electron host for the Meteor based walle
 
 ## Help and troubleshooting
 
-Please check the [Mist troubleshooting guide](https://github.com/ethersocial/ethersocialwallet/wiki).
+Please check the [Mist troubleshooting guide](https://github.com/ethersocial/escwallet/wiki).
 
 Or the [Gitter Channel](https://gitter.im/ethersocial/mist), to connect with the community for instant help.
 
 ## Installation
 
-If you want to install the app from a pre-built version on the [release page](https://github.com/ethersocial/ethersocialwallet/releases),
+If you want to install the app from a pre-built version on the [release page](https://github.com/ethersocial/escwallet/releases),
 you can simply run the executeable after download.
 
 For updating simply download the new version and copy it over the old one (keep a backup of the old one if you want to be sure).
@@ -57,13 +57,13 @@ Install the latter ones via:
 
 Now you're ready to initialise EtherSocialWallet for development:
 
-    $ git clone https://github.com/ethersocial/ethersocialwallet.git
-    $ cd ethersocialwallet
+    $ git clone https://github.com/ethersocial/escwallet.git
+    $ cd escwallet
     $ yarn
 
 To update EtherSocialWallet in the future, run:
 
-    $ cd ethersocialwallet
+    $ cd escwallet
     $ git pull
     $ yarn
 
@@ -72,14 +72,14 @@ To update EtherSocialWallet in the future, run:
 For development we start the interface with a Meteor server for autoreload etc.
 *Start the interface in a separate terminal window:*
 
-    $ cd ethersocialwallet/interface && meteor --no-release-check
+    $ cd escwallet/interface && meteor --no-release-check
 
 In the original window you can then start EtherSocialWallet with:
 
-    $ cd ethersocialwallet
+    $ cd escwallet
     $ yarn dev:electron
 
-*NOTE: client-binaries (e.g. [gesc](https://github.com/ethersocial/go-ethersocial)) specified in [clientBinaries.json](https://github.com/ethersocial/ethersocialwallet/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)*
+*NOTE: client-binaries (e.g. [gesc](https://github.com/ethersocial/go-ethersocial)) specified in [clientBinaries.json](https://github.com/ethersocial/escwallet/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)*
 
 *NOTE: use `--help` to display available options, e.g. `--loglevel debug` (or `trace`) for verbose output*
 
@@ -87,7 +87,7 @@ In the original window you can then start EtherSocialWallet with:
 
 Start the wallet app for development, *in a separate terminal window:*
 
-    $ cd ethersocialwallet/interface && meteor --no-release-check
+    $ cd escwallet/interface && meteor --no-release-check
 
     // and in another terminal
 
@@ -95,7 +95,7 @@ Start the wallet app for development, *in a separate terminal window:*
 
 In the original window you can then start Mist using wallet mode:
 
-    $ cd ethersocialwallet
+    $ cd escwallet
     $ yarn dev:electron --mode wallet
 
 
