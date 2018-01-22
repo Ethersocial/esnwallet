@@ -351,6 +351,77 @@ let menuTempl = function (webviews) {
     });
 
 
+
+
+    // WINDOW
+    menu.push({
+        label: i18n.t('mist.applicationMenu.window.label'),
+        role: 'window',
+        submenu: [
+            {
+                label: i18n.t('mist.applicationMenu.window.minimize'),
+                accelerator: 'CommandOrControl+M',
+                role: 'minimize',
+            },
+            {
+                label: i18n.t('mist.applicationMenu.window.close'),
+                accelerator: 'CommandOrControl+W',
+                role: 'close',
+            },
+            {
+                type: 'separator',
+            },
+            {
+                label: i18n.t('mist.applicationMenu.window.toFront'),
+                role: 'front',
+            },
+        ],
+    });
+
+    // HELP
+    const helpMenu = [];
+
+    if (process.platform === 'freebsd' || process.platform === 'linux' ||
+            process.platform === 'sunos' || process.platform === 'win32') {
+        helpMenu.push(
+            {
+                label: i18n.t('mist.applicationMenu.app.about', { app: Settings.appName }),
+                click() {
+                    Windows.createPopup('about', {
+                        electronOptions: {
+                            width: 420,
+                            height: 230,
+                            alwaysOnTop: true,
+                        },
+                    });
+                },
+            },
+            {
+                label: i18n.t('mist.applicationMenu.app.checkForUpdates'),
+                click() {
+                    updateChecker.runVisibly();
+                },
+            }
+        );
+    }
+    helpMenu.push({
+        label: i18n.t('mist.applicationMenu.help.mistWiki'),
+        click() {
+            shell.openExternal('https://github.com/ethersocial/escwallet/wiki');
+        },
+    }, {
+        label: i18n.t('mist.applicationMenu.help.reportBug'),
+        click() {
+            shell.openExternal('https://github.com/ethersocial/escwallet/issues');
+        },
+    });
+
+    menu.push({
+        label: i18n.t('mist.applicationMenu.help.label'),
+        role: 'help',
+        submenu: helpMenu,
+    });
+
     // DEVELOP
     const devToolsMenu = [];
     let devtToolsSubMenu;
@@ -542,76 +613,7 @@ let menuTempl = function (webviews) {
     menu.push({
         label: ((global.mining) ? '⛏ ' : '') + i18n.t('mist.applicationMenu.develop.label'),
         submenu: devToolsMenu,
-    });
-
-    // WINDOW
-    menu.push({
-        label: i18n.t('mist.applicationMenu.window.label'),
-        role: 'window',
-        submenu: [
-            {
-                label: i18n.t('mist.applicationMenu.window.minimize'),
-                accelerator: 'CommandOrControl+M',
-                role: 'minimize',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.window.close'),
-                accelerator: 'CommandOrControl+W',
-                role: 'close',
-            },
-            {
-                type: 'separator',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.window.toFront'),
-                role: 'front',
-            },
-        ],
-    });
-
-    // HELP
-    const helpMenu = [];
-
-    if (process.platform === 'freebsd' || process.platform === 'linux' ||
-            process.platform === 'sunos' || process.platform === 'win32') {
-        helpMenu.push(
-            {
-                label: i18n.t('mist.applicationMenu.app.about', { app: Settings.appName }),
-                click() {
-                    Windows.createPopup('about', {
-                        electronOptions: {
-                            width: 420,
-                            height: 230,
-                            alwaysOnTop: true,
-                        },
-                    });
-                },
-            },
-            {
-                label: i18n.t('mist.applicationMenu.app.checkForUpdates'),
-                click() {
-                    updateChecker.runVisibly();
-                },
-            }
-        );
-    }
-    helpMenu.push({
-        label: i18n.t('mist.applicationMenu.help.mistWiki'),
-        click() {
-            shell.openExternal('https://github.com/ethersocial/escwallet/wiki');
-        },
-    }, {
-        label: i18n.t('mist.applicationMenu.help.reportBug'),
-        click() {
-            shell.openExternal('https://github.com/ethersocial/escwallet/issues');
-        },
-    });
-
-    menu.push({
-        label: i18n.t('mist.applicationMenu.help.label'),
-        role: 'help',
-        submenu: helpMenu,
-    });
+    });    
     return menu;
 };
 
