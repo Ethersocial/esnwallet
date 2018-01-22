@@ -178,7 +178,7 @@ To generate the binaries for EtherSocialWallet run:
 
     $ gulp
 
-To generate the EtherSocial Wallet (this will pack the one Ðapp from https://github.com/ethersocial/meteor-dapp-wallet):
+To generate the ESC Wallet (this will pack the one Ðapp from https://github.com/ethersocial/meteor-dapp-wallet):
 
     $ gulp --wallet
 
