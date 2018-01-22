@@ -62,7 +62,7 @@
             },
             "help": {
                 "label": "도움말",
-                "mistWiki": "ESC 위키",
+                "mistWiki": "ESC지갑 위키",
                 "reportBug": "이슈 리포트 보고하기"
             }
         },
