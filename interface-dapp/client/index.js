@@ -13,7 +13,7 @@ Meteor.startup(function() {
         } else if (_.isObject(availLang) && availLang[userLang.substr(0,2)]) {
             TAPi18n.setLanguage(userLang.substr(0,2));
         } else {
-            TAPi18n.setLanguage('en');
+            TAPi18n.setLanguage('ko');
         }
     }
     // change moment and numeral language, when language changes

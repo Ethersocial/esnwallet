@@ -6,8 +6,7 @@ const got = require('got');
 const path = require('path');
 const Settings = require('./settings');
 const Windows = require('./windows');
-const ClientBinaryManager = require('ethereum-client-binaries').Manager;
-//const ClientBinaryManager = require('./ethersocialutil/ethersocial-client-binaries').Manager;
+const ClientBinaryManager = require('esc-client-binaries').Manager;
 const EventEmitter = require('events').EventEmitter;
 
 const log = require('./utils/logger').create('ClientBinaryManager');
