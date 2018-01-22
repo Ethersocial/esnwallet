@@ -121,8 +121,8 @@ gulp.task('update-i18n', (cb) => {
      *  - removes obsolet keys from translations
      */
 
-    const mistEN = require('../interface/i18n/mist.ko.i18n.json');  // eslint-disable-line no-unused-vars
-    const appEN = require('../interface/i18n/app.ko.i18n.json');  // eslint-disable-line no-unused-vars
+    const mistEN = require('../interface/i18n/mist.en.i18n.json');  // eslint-disable-line no-unused-vars
+    const appEN = require('../interface/i18n/app.en.i18n.json');  // eslint-disable-line no-unused-vars
 
     try {
         ['mist', 'app'].forEach((mode) => {
