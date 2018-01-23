@@ -234,39 +234,8 @@ let menuTempl = function (webviews) {
                         },
                     },
                 ],
-            },
-            {
-                type: 'separator',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.file.swarmUpload'),
-                accelerator: 'Shift+CommandOrControl+U',
-                click() {
-                    const focusedWindow = BrowserWindow.getFocusedWindow();
-                    const paths = dialog.showOpenDialog(focusedWindow, {
-                        properties: ['openFile', 'openDirectory']
-                    });
-                    if (paths && paths.length === 1) {
-                        const isDir = fs.lstatSync(paths[0]).isDirectory();
-                        const defaultPath = path.join(paths[0], 'index.html');
-                        const uploadConfig = {
-                            path: paths[0],
-                            kind: isDir ? 'directory' : 'file',
-                            defaultFile: fs.existsSync(defaultPath) ? '/index.html' : null
-                        };
-                        swarmNode.upload(uploadConfig).then((hash) => {
-                            focusedWindow.webContents.executeJavaScript(`
-                              Tabs.update('browser', {$set: {
-                                  url: 'bzz://${hash}',
-                                  redirect: 'bzz://${hash}'
-                              }});
-                              LocalStore.set('selectedTab', 'browser');
-                            `);
-                            console.log('Hash uploaded:', hash);
-                        }).catch(e => console.log(e));
-                    }
-                }
-            }]
+            }
+        ]
     });
 
     // EDIT
@@ -382,6 +351,77 @@ let menuTempl = function (webviews) {
     });
 
 
+
+
+    // WINDOW
+    menu.push({
+        label: i18n.t('mist.applicationMenu.window.label'),
+        role: 'window',
+        submenu: [
+            {
+                label: i18n.t('mist.applicationMenu.window.minimize'),
+                accelerator: 'CommandOrControl+M',
+                role: 'minimize',
+            },
+            {
+                label: i18n.t('mist.applicationMenu.window.close'),
+                accelerator: 'CommandOrControl+W',
+                role: 'close',
+            },
+            {
+                type: 'separator',
+            },
+            {
+                label: i18n.t('mist.applicationMenu.window.toFront'),
+                role: 'front',
+            },
+        ],
+    });
+
+    // HELP
+    const helpMenu = [];
+
+    if (process.platform === 'freebsd' || process.platform === 'linux' ||
+            process.platform === 'sunos' || process.platform === 'win32') {
+        helpMenu.push(
+            {
+                label: i18n.t('mist.applicationMenu.app.about', { app: Settings.appName }),
+                click() {
+                    Windows.createPopup('about', {
+                        electronOptions: {
+                            width: 420,
+                            height: 230,
+                            alwaysOnTop: true,
+                        },
+                    });
+                },
+            },
+            {
+                label: i18n.t('mist.applicationMenu.app.checkForUpdates'),
+                click() {
+                    updateChecker.runVisibly();
+                },
+            }
+        );
+    }
+    helpMenu.push({
+        label: i18n.t('mist.applicationMenu.help.mistWiki'),
+        click() {
+            shell.openExternal('https://github.com/ethersocial/escwallet/wiki');
+        },
+    }, {
+        label: i18n.t('mist.applicationMenu.help.reportBug'),
+        click() {
+            shell.openExternal('https://github.com/ethersocial/escwallet/issues');
+        },
+    });
+
+    menu.push({
+        label: i18n.t('mist.applicationMenu.help.label'),
+        role: 'help',
+        submenu: helpMenu,
+    });
+
     // DEVELOP
     const devToolsMenu = [];
     let devtToolsSubMenu;
@@ -483,16 +523,16 @@ let menuTempl = function (webviews) {
         const nodeSubmenu = [];
 
         const ethClient = ClientBinaryManager.getClient('eth');
-        const gethClient = ClientBinaryManager.getClient('geth');
+        const gethClient = ClientBinaryManager.getClient('gesc');
 
         if (gethClient) {
             nodeSubmenu.push({
-                label: `Geth ${gethClient.version}`,
+                label: `Gesc ${gethClient.version}`,
                 checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
                 enabled: ethereumNode.isOwnNode,
                 type: 'checkbox',
                 click() {
-                    restartNode('geth', null, 'fast', webviews);
+                    restartNode('gesc', null, 'fast', webviews);
                 },
             });
         }
@@ -533,23 +573,13 @@ let menuTempl = function (webviews) {
                 },
             },
             {
-                label: 'Ropsten - Test network',
+                label: 'TEST - Test network',
                 accelerator: 'CommandOrControl+Alt+2',
                 checked: ethereumNode.isOwnNode && ethereumNode.network === 'test',
                 enabled: ethereumNode.isOwnNode,
                 type: 'checkbox',
                 click() {
                     restartNode(ethereumNode.type, 'test');
-                },
-            },
-            {
-                label: 'Rinkeby - Test network',
-                accelerator: 'CommandOrControl+Alt+3',
-                checked: ethereumNode.isOwnNode && ethereumNode.network === 'rinkeby',
-                enabled: ethereumNode.isOwnNode,
-                type: 'checkbox',
-                click() {
-                    restartNode(ethereumNode.type, 'rinkeby');
                 },
             },
             {
@@ -563,19 +593,6 @@ let menuTempl = function (webviews) {
                 },
             }
         ] });
-
-    // Light mode switch should appear when not in Solo Mode (dev network)
-    if (ethereumNode.isOwnNode && ethereumNode.isGeth && !ethereumNode.isDevNetwork) {
-        devToolsMenu.push({
-            label: 'Sync with Light client (beta)',
-            enabled: true,
-            checked: ethereumNode.isLightMode,
-            type: 'checkbox',
-            click() {
-                restartNode('geth', null, (ethereumNode.isLightMode) ? 'fast' : 'light');
-            },
-        });
-    }
 
     // Enables mining menu: only in Solo mode and Ropsten network (testnet)
     if (ethereumNode.isOwnNode && (ethereumNode.isTestNetwork || ethereumNode.isDevNetwork)) {
@@ -596,81 +613,7 @@ let menuTempl = function (webviews) {
     menu.push({
         label: ((global.mining) ? '⛏ ' : '') + i18n.t('mist.applicationMenu.develop.label'),
         submenu: devToolsMenu,
-    });
-
-    // WINDOW
-    menu.push({
-        label: i18n.t('mist.applicationMenu.window.label'),
-        role: 'window',
-        submenu: [
-            {
-                label: i18n.t('mist.applicationMenu.window.minimize'),
-                accelerator: 'CommandOrControl+M',
-                role: 'minimize',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.window.close'),
-                accelerator: 'CommandOrControl+W',
-                role: 'close',
-            },
-            {
-                type: 'separator',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.window.toFront'),
-                role: 'front',
-            },
-        ],
-    });
-
-    // HELP
-    const helpMenu = [];
-
-    if (process.platform === 'freebsd' || process.platform === 'linux' ||
-            process.platform === 'sunos' || process.platform === 'win32') {
-        helpMenu.push(
-            {
-                label: i18n.t('mist.applicationMenu.app.about', { app: Settings.appName }),
-                click() {
-                    Windows.createPopup('about', {
-                        electronOptions: {
-                            width: 420,
-                            height: 230,
-                            alwaysOnTop: true,
-                        },
-                    });
-                },
-            },
-            {
-                label: i18n.t('mist.applicationMenu.app.checkForUpdates'),
-                click() {
-                    updateChecker.runVisibly();
-                },
-            }
-        );
-    }
-    helpMenu.push({
-        label: i18n.t('mist.applicationMenu.help.mistWiki'),
-        click() {
-            shell.openExternal('https://github.com/ethersocial/ethersocialwallet/wiki');
-        },
-    }, {
-        label: i18n.t('mist.applicationMenu.help.gitter'),
-        click() {
-            shell.openExternal('https://gitter.im/ethersocial/mist');
-        },
-    }, {
-        label: i18n.t('mist.applicationMenu.help.reportBug'),
-        click() {
-            shell.openExternal('https://github.com/ethersocial/ethersocialwallet/issues');
-        },
-    });
-
-    menu.push({
-        label: i18n.t('mist.applicationMenu.help.label'),
-        role: 'help',
-        submenu: helpMenu,
-    });
+    });    
     return menu;
 };
 

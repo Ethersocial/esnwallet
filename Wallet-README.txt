@@ -1,6 +1,6 @@
-Ethersocial Wallet
+ESC Wallet
 
-The Ethersocial wallet, which allows you to create simple and multisig wallets to manage your esc.
+The ESC wallet, which allows you to create simple and multisig wallets to manage your esc.
 
 The wallet contains its own node, but can also use an already running one, if the IPC path of that node is the standard path.
 (See below)
@@ -56,11 +56,11 @@ The wallet code can be found at
 https://github.com/ethersocial/meteor-dapp-wallet
 
 And the binary application code, which wraps the wallet app can be found at   
-https://github.com/ethersocial/ethersocialwallet/tree/wallet
+https://github.com/ethersocial/escwallet/tree/wallet
 
 
 
 ## Bundling the wallet
 
 To bundle the binaries yourself follow the instructions on the mist#wallet readme  
-https://github.com/ethersocial/ethersocialwallet/tree/wallet#deployment
+https://github.com/ethersocial/escwallet/tree/wallet#deployment

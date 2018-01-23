@@ -619,7 +619,7 @@ function Progress() {
   this.percent = 0;
   this.size(0);
   this.fontSize(11);
-  this.font('helvetica, arial, sans-serif');
+  this.font('helvetica, arial, sans-serif, Malgun Gothic');
 }
 
 /**

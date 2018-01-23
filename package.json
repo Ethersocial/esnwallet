@@ -1,11 +1,11 @@
 {
-  "name": "ethersocialwallet",
-  "version": "0.1.2",
+  "name": "escwallet",
+  "version": "0.1.4",
   "license": "GPL-3.0",
-  "author": "EtherSocial Wallet<ethersocialcoin@gmail.com>",
+  "author": "ESC Wallet<ethersocialcoin@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ethersocial/ethersocialwallet.git"
+    "url": "https://github.com/ethersocial/escwallet.git"
   },
   "scripts": {
     "postinstall": "cd interface && yarn",
@@ -51,7 +51,7 @@
     "co-mocha": "^1.2.0",
     "del": "^2.2.2",
     "ecstatic": "^2.1.0",
-    "electron": "1.7.9",
+    "electron": "1.7.11",
     "electron-builder": "^12.2.2",
     "eslint": "^3.14.1",
     "eslint-config-airbnb-base": "^11.0.1",

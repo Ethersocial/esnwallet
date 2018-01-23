@@ -36,20 +36,9 @@
                 "languages": "Language",
                 "default": "Default",
                 "langCodes": {
-                    "ca": "Català",
-                    "de": "Deutsch",
                     "en": "English",
-                    "es": "Español",
-                    "fa": "فارسى",
-                    "fr": "Français",
-                    "it": "Italiano",
                     "ja": "日本語",
                     "ko": "한국어 ",
-                    "nl": "Nederlands",
-                    "nb": "Norsk",
-                    "pt": "Português",
-                    "sq": "Shqip",
-                    "ru": "Pусский",
                     "zh": "普通話",
                     "zh-TW": "國語"
                 }
@@ -162,7 +151,7 @@
             "nodeSyncConnecting": "Looking for peers...",
             "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
             "peerSearchTimeout": "Skip peer search",
-            "launchApp": "Launch Application",
+            "launchApp": "Click To Start!!",
             "clientBinaries": {
                 "scanning": "Checking for node update...",
                 "downloading": "Downloading new node...",
@@ -276,7 +265,7 @@
                 "buttons": {
                     "showPassword": "Show password",
                     "importAccount": "Import account",
-                    "launchApp": "Launch Application!",
+                    "launchApp": "Click To Start!!!",
                     "learnReceipt": "Learn this recipe"
                 },
                 "errors": {

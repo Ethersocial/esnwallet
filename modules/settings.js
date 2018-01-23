@@ -205,8 +205,7 @@ class Settings {
     }
 
     get appName() {
-//        return this.uiMode === 'mist' ? 'Mist' : 'EtherSocial Wallet';
-        return 'ESC Wallet';
+        return 'ESCwallet';
     }
 
     get appLicense() {

@@ -135,7 +135,7 @@
             "unableToBindPort": "EtherSocial node cannot run. Is another instance already running?",
             "nodeSyncInfoStates": "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
             "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
-            "launchApp": "Launch Application",
+            "launchApp": "Click To Start!!",
             "clientBinaries": {
                 "scanning": "Checking for node update...",
                 "downloading": "Downloading new node...",

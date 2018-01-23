@@ -27,8 +27,8 @@ RequestExecutionLevel admin
 
 !searchreplace APPNAMENOHYPEN ${APPNAME} "-" " "
 !define GROUPNAME "Ethereum"
-!define HELPURL "https://github.com/ethersocial/ethersocialwallet/releases/issues"
-!define UPDATEURL "https://github.com/ethersocial/ethersocialwallet/releases"
+!define HELPURL "https://github.com/ethersocial/escwallet/releases/issues"
+!define UPDATEURL "https://github.com/ethersocial/escwallet/releases"
 !define ABOUTURL "https://ethersocial.org"
 !define /date NOW "%Y%m%d"
 
