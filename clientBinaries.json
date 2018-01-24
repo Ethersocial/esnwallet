@@ -26,10 +26,10 @@
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/geth-windows-386-1.7.2-1db4ecdc.zip",
+                            "url": "https://gethstore.blob.core.windows.net/builds/gesc-windows-386-0.2.0-1db4ecdc.zip",
                             "type": "zip",
                             "md5": "50b353bf3639a502b06e0098c751df67",
-                            "bin": "geth-windows-386-1.7.2-1db4ecdc\\geth.exe"
+                            "bin": "geth-windows-386-0.2.0-1db4ecdc\\gesc.exe"
                         },
                         "bin": "geth.exe",
                         "commands": {
@@ -39,7 +39,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.7.2"
+                                    "0.2.0"
                                 ]
                             }
                         }
