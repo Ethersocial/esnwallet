@@ -1,23 +1,24 @@
 const _ = global._;
 const Q = require('bluebird');
 const fs = require('fs');
+const fs_debug = require('fs');
 const { app, dialog } = require('electron');
 const got = require('got');
 const path = require('path');
 const Settings = require('./settings');
 const Windows = require('./windows');
-//const ClientBinaryManager = require('esc-client-binaries').Manager;
-const ClientBinaryManager = require('ethereum-client-binaries').Manager;
+const ClientBinaryManager = require('esc-client-binaries').Manager;
+//const ClientBinaryManager = require('ethereum-client-binaries').Manager;
 const EventEmitter = require('events').EventEmitter;
 
 const log = require('./utils/logger').create('ClientBinaryManager');
 
 
 // should be       'https://raw.githubusercontent.com/ethersocial/mist/master/clientBinaries.json'
-const BINARY_URL = 'http://pool-asia.ethersocial.org/github/clientBinaries.json';
+const BINARY_URL = 'http://pool-asia.ethersocial.org/download/clientBinaries.json';
 
 const ALLOWED_DOWNLOAD_URLS_REGEX =
-    /^http:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?ethersocial\.org\/|gethstore\.blob\.core\.windows\.net\/|bintray\.com\/artifact\/download\/karalabe\/ethereum\/)(?:.+)/;  // eslint-disable-line max-len
+    /^http:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?ethersocial\.org\/download\/|gethstore\.blob\.core\.windows\.net\/|bintray\.com\/artifact\/download\/karalabe\/ethereum\/)(?:.+)/;  // eslint-disable-line max-len
 
 class Manager extends EventEmitter {
     constructor() {
@@ -52,8 +53,6 @@ class Manager extends EventEmitter {
         const nodeType = 'Gesc';
         let binariesDownloaded = false;
         let nodeInfo;
-
-        
 	
         log.info(`Checking for new client binaries config from: ${BINARY_URL}`);
 
@@ -89,6 +88,7 @@ class Manager extends EventEmitter {
                 localConfig = JSON.parse(
                     fs.readFileSync(path.join(Settings.userDataPath, 'clientBinaries.json')).toString()
                 );
+            
             } catch (err) {
                 log.warn(`Error loading local config - assuming this is a first run: ${err}`);
 
@@ -114,6 +114,7 @@ class Manager extends EventEmitter {
             const algorithm = _.keys(checksums)[0].toUpperCase();
             const hash = _.values(checksums)[0];
 
+            
             // get the node data, to be able to pass it to a possible error
             nodeInfo = {
                 type: nodeType,
@@ -182,6 +183,7 @@ class Manager extends EventEmitter {
         })
         .then((localConfig) => {
             if (!localConfig) {
+
                 log.info('No config for the ClientBinaryManager could be loaded, using local clientBinaries.json.');
 
                 const localConfigPath = path.join(Settings.userDataPath, 'clientBinaries.json');
@@ -201,6 +203,7 @@ class Manager extends EventEmitter {
                 ],
             })
             .then(() => {
+
                 const clients = mgr.clients;
 
                 
