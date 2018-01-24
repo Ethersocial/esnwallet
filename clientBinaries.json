@@ -1,15 +1,15 @@
 {
     "clients": {
         "Gesc": {
-            "version": "0.1.0",
+            "version": "0.2.0",
             "platforms": {
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "pool-asia.ethersocial.org/gesc-windows-amd64-0.1.0.zip",
+                            "url": "https://www.ethersocial.org/download/gesc-win-amd64-0.2.0.zip",
                             "type": "zip",
                             "md5": "60C509BF5CCD966249958ADFB9B49852",
-                            "bin": "gesc-windows-amd64-0.1.0\\gesc.exe"
+                            "bin": "gesc-win-amd64-0.2.0\\gesc.exe"
                         },
                         "bin": "gesc.exe",
                         "commands": {
@@ -19,7 +19,7 @@
                                 ],
                                 "output": [
                                     "Gesc",
-                                    "0.1.0"
+                                    "0.2.0"
                                 ]
                             }
                         }
