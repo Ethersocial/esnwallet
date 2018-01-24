@@ -8,7 +8,7 @@
                         "download": {
                             "url": "pool-asia.ethersocial.org/gesc-windows-amd64-0.1.0.zip",
                             "type": "zip",
-                            "md5": "60C509BF5CCD966249958ADFB9B49852",
+                            "md5": "08D16506EE51AD3BB8D4FB594DDDF526",
                             "bin": "gesc-windows-amd64-0.1.0\\gesc.exe"
                         },
                         "bin": "gesc.exe",
