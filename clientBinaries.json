@@ -8,7 +8,7 @@
                         "download": {
                             "url": "https://www.ethersocial.org/download/gesc-win-amd64-0.2.0.zip",
                             "type": "zip",
-                            "md5": "08D16506EE51AD3BB8D4FB594DDDF526",
+                            "md5": "C0268E2C3BCE1E563237D8C2958D9237",
                             "bin": "gesc-win-amd64-0.2.0\\gesc.exe"
                         },
                         "bin": "gesc.exe",
