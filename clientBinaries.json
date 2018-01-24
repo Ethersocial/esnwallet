@@ -6,7 +6,7 @@
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "http://pool-asia.ethersocial.org/download/gesc-win-amd64-0.2.0.zip",
+                            "url": "http://www.ethersocial.org/download/gesc-win-amd64-0.2.0.zip",
                             "type": "zip",
                             "md5": "08D16506EE51AD3BB8D4FB594DDDF526",
                             "bin": "gesc-win-amd64-0.2.0\\gesc.exe"
