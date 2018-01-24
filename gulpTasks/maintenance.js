@@ -33,7 +33,7 @@ gulp.task('update-nodes', (cb) => {
             geth.version = latestGethVersion;
 
             // Query commit hash (first 8 characters)
-            got(`pool-asia.ethersocial.org/download/commits_${tagName}.json`, { json: true })
+            got(`http://pool-asia.ethersocial.org/download/commits_${tagName}.json`, { json: true })
             .then((response) => {
                 return String(response.body.sha).substr(0, 8);
             })
@@ -41,7 +41,7 @@ gulp.task('update-nodes', (cb) => {
                 let blobs; // azure blobs
 
                 // Query Azure assets for md5 hashes
-                got('pool-asia.ethersocial.org/download/builds_list.xml', { xml: true })
+                got('http://pool-asia.ethersocial.org/download/builds_list.xml', { xml: true })
                 .then((response) => {
                 	
                     parseJson(response.body, (err, data) => {  // eslint-disable-line

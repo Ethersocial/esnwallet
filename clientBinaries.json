@@ -1,15 +1,15 @@
 {
     "clients": {
         "Gesc": {
-            "version": "0.2.0",
+            "version": "0.1.0",
             "platforms": {
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "pool-asia.ethersocial.org/download/gesc-win-amd64-0.2.0.zip",
+                            "url": "pool-asia.ethersocial.org/gesc-windows-amd64-0.1.0.zip",
                             "type": "zip",
                             "md5": "60C509BF5CCD966249958ADFB9B49852",
-                            "bin": "gesc-win-amd64-0.2.0\\gesc.exe"
+                            "bin": "gesc-windows-amd64-0.1.0\\gesc.exe"
                         },
                         "bin": "gesc.exe",
                         "commands": {
@@ -19,27 +19,27 @@
                                 ],
                                 "output": [
                                     "Gesc",
-                                    "0.2.0"
+                                    "0.1.0"
                                 ]
                             }
                         }
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://gethstore.blob.core.windows.net/builds/gesc-windows-386-0.2.0-1db4ecdc.zip",
+                            "url": "https://gethstore.blob.core.windows.net/builds/geth-windows-386-1.7.2-1db4ecdc.zip",
                             "type": "zip",
                             "md5": "50b353bf3639a502b06e0098c751df67",
-                            "bin": "geth-windows-386-0.2.0-1db4ecdc\\gesc.exe"
+                            "bin": "geth-windows-386-1.7.2-1db4ecdc\\geth.exe"
                         },
-                        "bin": "gesc.exe",
+                        "bin": "geth.exe",
                         "commands": {
                             "sanity": {
                                 "args": [
                                     "version"
                                 ],
                                 "output": [
-                                    "Gesc",
-                                    "0.2.0"
+                                    "Geth",
+                                    "1.7.2"
                                 ]
                             }
                         }
