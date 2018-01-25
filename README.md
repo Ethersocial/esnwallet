@@ -1,4 +1,4 @@
-# EtherSocialWallet
+# EtherSocialWallet  
 
 [![Join the chat at https://gitter.im/ethersocial/escwallet](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethersocial/escwallet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status develop branch](https://travis-ci.org/ethersocial/escwallet.svg?branch=master)](https://travis-ci.org/ethersocial/escwallet)
