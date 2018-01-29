@@ -23,7 +23,27 @@
                                 ]
                             }
                         }
-                    }
+                    },
+					"ia32": {
+					    "download": {
+					        "url": "https://www.ethersocial.org/download/gesc-win-386-0.2.0.zip",
+					        "type": "zip",
+					        "md5": "BB3AB8B7C6909453490623E6B1B161B5",
+					        "bin": "gesc-win-386-0.2.0\\gesc.exe"
+					    },
+					    "bin": "gesc.exe",
+					    "commands": {
+					        "sanity": {
+					            "args": [
+					                "version"
+					            ],
+					            "output": [
+					                "Gesc",
+					                "0.2.0"
+					            ]
+					        }
+					    }
+					}
                 }
             }
         }
