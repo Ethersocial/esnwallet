@@ -23,7 +23,7 @@
                                 ]
                             }
                         }
-                    }
+                    },
 					"ia32": {
 					    "download": {
 					        "url": "https://www.ethersocial.org/download/gesc-win-386-0.2.0.zip",
