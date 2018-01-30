@@ -52,6 +52,7 @@ Install the latter ones via:
     $ curl -o- -L https://yarnpkg.com/install.sh | bash
     $ yarn global add electron@1.7.9
     $ yarn global add gulp
+    $ sudo npm install -g meteor-build-client
 
 ### Initialisation
 
@@ -162,7 +163,7 @@ Our build system relies on [gulp](http://gulpjs.com/) and [electron-builder](htt
 
 [meteor-build-client](https://github.com/frozeman/meteor-build-client) bundles the [meteor](https://www.meteor.com/)-based interface. Install it via:
 
-    $ npm install -g meteor-build-client
+    $ sudo npm install -g meteor-build-client
 
 Furthermore cross-platform builds require additional [`electron-builder` dependencies](https://github.com/electron-userland/electron-builder/wiki/Multi-Platform-Build#linux). On macOS those are:
 
