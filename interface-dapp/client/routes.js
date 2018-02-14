@@ -87,7 +87,7 @@ FlowRouter.route('/contracts', {
     action: function(params, queryParams) {
         BlazeLayout.render('layout_main', {
             header: 'layout_header',
-            main: 'views_contracts'
+            main: 'views_dashboard'
         });
     }
 });
