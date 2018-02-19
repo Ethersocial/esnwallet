@@ -13,6 +13,7 @@ const http = require('http');
 const ecstatic = require('ecstatic');
 const express = require('express');
 const ClientBinaryManager = require('esc-client-binaries').Manager;
+//const ClientBinaryManager = require('ethereum-client-binaries').Manager;
 const logger = require('../modules/utils/logger');
 
 chai.should();

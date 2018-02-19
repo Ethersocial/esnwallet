@@ -1,4 +1,4 @@
-# EtherSocialWallet
+# EtherSocialWallet  
 
 [![Join the chat at https://gitter.im/ethersocial/escwallet](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethersocial/escwallet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status develop branch](https://travis-ci.org/ethersocial/escwallet.svg?branch=master)](https://travis-ci.org/ethersocial/escwallet)
@@ -52,6 +52,19 @@ Install the latter ones via:
     $ curl -o- -L https://yarnpkg.com/install.sh | bash
     $ yarn global add electron@1.7.9
     $ yarn global add gulp
+    
+Install WineHQ
+
+    $ sudo dpkg --add-architecture i386 
+    $ wget -nc https://dl.winehq.org/wine-builds/Release.key
+    $ sudo apt-key add Release.key
+    $ sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+    $ sudo apt-get update
+    $ sudo apt-get install --install-recommends winehq-stable
+    
+Insatall Meteor-build-client
+
+    $ sudo npm install -g meteor-build-client
 
 ### Initialisation
 
@@ -60,6 +73,7 @@ Now you're ready to initialise EtherSocialWallet for development:
     $ git clone https://github.com/ethersocial/escwallet.git
     $ cd escwallet
     $ yarn
+    $ gulp --win
 
 To update EtherSocialWallet in the future, run:
 
@@ -162,7 +176,7 @@ Our build system relies on [gulp](http://gulpjs.com/) and [electron-builder](htt
 
 [meteor-build-client](https://github.com/frozeman/meteor-build-client) bundles the [meteor](https://www.meteor.com/)-based interface. Install it via:
 
-    $ npm install -g meteor-build-client
+    $ sudo npm install -g meteor-build-client
 
 Furthermore cross-platform builds require additional [`electron-builder` dependencies](https://github.com/electron-userland/electron-builder/wiki/Multi-Platform-Build#linux). On macOS those are:
 

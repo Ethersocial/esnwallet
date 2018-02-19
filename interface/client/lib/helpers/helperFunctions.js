@@ -219,13 +219,13 @@ Helpers.detectNetwork = function (hash) {
     var network = {};
 
     switch (hash) {
-    case '0xc710d573a490c06cd2ce68d2b5fe3bd63f4eddfe4e4154953ddc6173b1230fb8':
+    case '0x310dd3c4ae84dd89f1b46cfdd5e26c8f904dfddddc73f323b468127272e20e9f':
         console.log('Network is mainnet');
         network.type = 'mainnet';
         network.name = 'Main';
         break;
 
-    case '0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d':
+    case '0xc710d573a490c06cd2ce68d2b5fe3bd63f4eddfe4e4154953ddc6173b1230fb8':
         console.log('Network is Testnet #1 (TEST01)');
         network.type = 'testnet';
         network.name = 'TEST01';

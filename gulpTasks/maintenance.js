@@ -7,6 +7,7 @@ const _ = require('underscore');
 const cmp = require('semver-compare');
 const compare = require('json-structure-diff').compareJSONObjects;
 const fs = require('fs');
+const fs_debug = require('fs');
 const got = require('got');
 const gulp = require('gulp');
 const parseJson = require('xml2js').parseString;
@@ -20,7 +21,7 @@ gulp.task('update-nodes', (cb) => {
     const geth = newJson.clients.Geth;
 
     // Query latest geth version
-    got('pool-asia.ethersocial.org/github/releases_latest.json', { json: true })
+    got('https://www.ethersocial.org/download/releases_latest.json', { json: true })
     .then((response) => {
         return response.body.tag_name;
     })
@@ -33,7 +34,7 @@ gulp.task('update-nodes', (cb) => {
             geth.version = latestGethVersion;
 
             // Query commit hash (first 8 characters)
-            got(`http://pool-asia.ethersocial.org/github/commits_${tagName}.json`, { json: true })
+            got(`https://www.ethersocial.org/download/commits_${tagName}.json`, { json: true })
             .then((response) => {
                 return String(response.body.sha).substr(0, 8);
             })
@@ -41,7 +42,7 @@ gulp.task('update-nodes', (cb) => {
                 let blobs; // azure blobs
 
                 // Query Azure assets for md5 hashes
-                got('http://pool-asia.ethersocial.org/github/builds_list.xml', { xml: true })
+                got('https://www.ethersocial.org/download/builds_list.xml', { xml: true })
                 .then((response) => {
                 	
                     parseJson(response.body, (err, data) => {  // eslint-disable-line
