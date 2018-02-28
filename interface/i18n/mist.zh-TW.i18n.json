@@ -101,7 +101,7 @@
             "testNetwork": "Test-net",
             "privateNetwork": "Private-net",
             "mainnetExplain": "You are on the main EtherSocial global network",
-            "privatenetExplain": "You are on a private net, DO NOT SEND any real ESC to these addresses",
+            "privatenetExplain": "You are on a private net, DO NOT SEND any real ESN to these addresses",
             "unknownnetExplain": "Unable to determine which network you are on"
         },
         "sidebar": {

@@ -307,8 +307,8 @@ Helpers.formatTransactionBalance = function(value, exchangeRates, unit) {
     var unit = unit || EthTools.getUnit(),
         format = '0,0.00';
 
-// ESC 단위
-    return EthTools.formatBalance(value, format + '[0000000000000000]')+ ' ESC';
+// ESN 단위
+    return EthTools.formatBalance(value, format + '[0000000000000000]')+ ' ESN';
 //    return EthTools.formatBalance(value, format) + ' '+ unit.toUpperCase();
         
     // if((unit === 'usd' || unit === 'eur' || unit === 'btc') &&

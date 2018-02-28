@@ -423,7 +423,7 @@ observeTransactions = function(){
                !newDocument.exchangeRates.eur ||
                !newDocument.exchangeRates.gbp ||
                !newDocument.exchangeRates.brl)) {
-                var url = 'https://min-api.cryptocompare.com/data/pricehistorical?fsym=ESC&tsyms=BTC,USD,EUR,GBP,BRL&ts='+ newDocument.timestamp;
+                var url = 'https://min-api.cryptocompare.com/data/pricehistorical?fsym=ESN&tsyms=BTC,USD,EUR,GBP,BRL&ts='+ newDocument.timestamp;
 
                 if(typeof mist !== 'undefined')
                     url += '&extraParams=Mist-'+ mist.version;

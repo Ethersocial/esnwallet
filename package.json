@@ -2,7 +2,7 @@
   "name": "escwallet",
   "version": "0.2.0",
   "license": "GPL-3.0",
-  "author": "ESC Wallet<ethersocialcoin@gmail.com>",
+  "author": "ESN Wallet<ethersocialcoin@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/ethersocial/escwallet.git"

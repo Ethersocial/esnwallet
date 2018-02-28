@@ -100,8 +100,8 @@
             "testNetwork": "Test-net",
             "privateNetwork": "Private-net",
             "mainnetExplain": "You are on the main EtherSocial global network",
-            "testnetExplain": "You are on the testnet, DO NOT SEND any real ESC to these addresses",
-            "privatenetExplain": "You are on a private net, DO NOT SEND any real ESC to these addresses",
+            "testnetExplain": "You are on the testnet, DO NOT SEND any real ESN to these addresses",
+            "privatenetExplain": "You are on a private net, DO NOT SEND any real ESN to these addresses",
             "unknownnetExplain": "Unable to determine which network you are on"
         },
         "sidebar": {
@@ -219,7 +219,7 @@
                 "accountTitle": "もっとダウンロードする!",
                 "accountTitleTestnet": "マイニングを行う!",
                 "etherDescription": "The ethersocial network  “Ether”. EtherSocial networkで何かを行うためには必ず必要となります。",
-                "loadItDescription": "既にもし Bitcoinを持っているか, もしくは他の暗号通貨を持っている場合には簡単にShapeshiftから変換する事ができます。 <br><br> 私たちは <strong>0.25 to 1 ESC</strong>を変換することをおすすめします.",
+                "loadItDescription": "既にもし Bitcoinを持っているか, もしくは他の暗号通貨を持っている場合には簡単にShapeshiftから変換する事ができます。 <br><br> 私たちは <strong>0.25 to 1 ESN</strong>を変換することをおすすめします.",
                 "mineItDescription": "<strong>テストネットでは自分自身でマイニングを行うか、 <em>Develop</em> メニューから <em>マイニングを始める</em>を選んで. </strong> <br> <strong> 絶対にこのアドレスにはEtherを送らないでください </strong>",
                 "you": "あなた",
                 "etherbase": "メインアカウント",

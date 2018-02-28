@@ -201,7 +201,7 @@ Template['views_send'].onRendered(function(){
             address = address.toLowerCase();
 
 
-        // ESC tx estimation
+        // ESN tx estimation
         if(tokenAddress === 'ether') {
 
             if(EthAccounts.findOne({address: address}, {reactive: false})) {

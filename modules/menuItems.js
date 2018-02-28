@@ -211,7 +211,7 @@ let menuTempl = function (webviews) {
                             // geth
                             } else {
                                 if (process.platform === 'darwin') {
-                                    userPath += '/Library/ESC/keystore';
+                                    userPath += '/Library/ESN/keystore';
                                 }
 
                                 if (process.platform === 'freebsd' ||
@@ -221,7 +221,7 @@ let menuTempl = function (webviews) {
                                 }
 
                                 if (process.platform === 'win32') {
-                                    userPath = `${Settings.appDataPath}\\ESC\\keystore`;
+                                    userPath = `${Settings.appDataPath}\\ESN\\keystore`;
                                 }
                             }
 

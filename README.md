@@ -158,7 +158,7 @@ To run a private network you will need to set the IPC path, network id and data
 folder:
 
 ```bash
-$ yarn dev:electron --rpc ~/Library/ESC/gesc.ipc --node-networkid 1234 --node-datadir ~/Library/ESC/privatenet
+$ yarn dev:electron --rpc ~/Library/ESN/gesc.ipc --node-networkid 1234 --node-datadir ~/Library/ESN/privatenet
 ```
 
 _NOTE: since `ipcpath` is also a Mist option you do not need to also include a
@@ -192,7 +192,7 @@ To generate the binaries for EtherSocialWallet run:
 
     $ gulp
 
-To generate the ESC Wallet (this will pack the one Ðapp from https://github.com/ethersocial/meteor-dapp-wallet):
+To generate the ESN Wallet (this will pack the one Ðapp from https://github.com/ethersocial/meteor-dapp-wallet):
 
     $ gulp --wallet
 

@@ -23,7 +23,7 @@
             "texts": {
                 "note": "ノート",
                 "balance": "残高",
-                "connectionErrorMist": "接続不可。 gesc を使用して下さい。:<br><br><small><code>__node__</code><br><br>IPC pathがデフォルトのものかを確認して下さい、違うものを使用している場合は <code>datadir</code>, e.g.<br><code>gesc --datadir ... --ipcpath /Users/&lt;yourUser&gt;/Library/ESC/gesc.ipc</code><br>or<br><code>gesc --datadir ... --ipcpath /Users/&lt;yourUser&gt;/.esceum/gesc.ipc</code>. <br><br>Optional add: <code>--unlock &lt;yourAccount&gt;.</code></small>",
+                "connectionErrorMist": "接続不可。 gesc を使用して下さい。:<br><br><small><code>__node__</code><br><br>IPC pathがデフォルトのものかを確認して下さい、違うものを使用している場合は <code>datadir</code>, e.g.<br><code>gesc --datadir ... --ipcpath /Users/&lt;yourUser&gt;/Library/ESN/gesc.ipc</code><br>or<br><code>gesc --datadir ... --ipcpath /Users/&lt;yourUser&gt;/.esceum/gesc.ipc</code>. <br><br>Optional add: <code>--unlock &lt;yourAccount&gt;.</code></small>",
                 "connectionErrorBrowser": "接続不可。以下のオプションから gesc を開始して下さい:<br><br><small><code>__node__</code><br><br>Optional add: <code>--unlock &lt;yourAccount&gt;.</code></small>",
                 "pendingConfirmationsBadge": "確認中!",
                 "nodeSyncing": "__blockDiff__ blocks left",
@@ -37,7 +37,7 @@
                 }
             },
             "error": {
-                "wrongChain": "ESC Wallet App を再起動して下さい。"
+                "wrongChain": "ESN Wallet App を再起動して下さい。"
             },
             "warnings": {
                 "txOriginVulnerabilityWallet": "このスマート契約財布は、古いコードを持っており、フィッシング攻撃の対象となります。",
@@ -275,7 +275,7 @@
             "title": "カスタム <strong>トークン</strong>",
             "subTitle": "トークンを足す",
             "admin": "__名前__ (admin page)",
-            "description": "トークンはイーサリアムのプラットホーム上に構築された通貨であり、他の代替可能なものです。アカウントがトークンを送るためには、それらのアドレスをリストに追加しなければなりません。次のものを修正することによって簡単に自分のトークンを作ることができます、 <a href=\"https://esceum.org/token#the-code\" target=\"_blank\">カスタムトークンコントラクトの例トークン</a> もしくはこちらをもっと学ぶ <a href=\"https://www.esceum.org/token\" target=\"_blank\">ESC Tokens</a>.",
+            "description": "トークンはイーサリアムのプラットホーム上に構築された通貨であり、他の代替可能なものです。アカウントがトークンを送るためには、それらのアドレスをリストに追加しなければなりません。次のものを修正することによって簡単に自分のトークンを作ることができます、 <a href=\"https://esceum.org/token#the-code\" target=\"_blank\">カスタムトークンコントラクトの例トークン</a> もしくはこちらをもっと学ぶ <a href=\"https://www.esceum.org/token\" target=\"_blank\">ESN Tokens</a>.",
             "deleteToken": "トークンを削除しますか<strong>__token__</strong> あなたのリストから",
             "addedToken": "Added __token__ to your watch list",
             "editedToken": "Edited token __token__",

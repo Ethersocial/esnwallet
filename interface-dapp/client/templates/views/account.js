@@ -336,7 +336,7 @@ Template['views_account'].events({
             address: this.address,
             code: "eb44c52c-9c3f-5fb6-8b11-fc3ec3022519",
             currency: "USD",
-            crypto_currency: "ESC",
+            crypto_currency: "ESN",
         })).show();
     },
 
