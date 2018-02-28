@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethersocial/escwallet.git"
+    "url": "git+https://github.com/ethersocial/esnwallet.git"
   },
   "keywords": [
     "ethersocial",
-    "escwallet",
+    "esnwallet",
     "web3"
   ],
   "author": "Ethersocial <ethersocialcoin@gmail.com>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/ethersocial/escwallet/issues"
+    "url": "https://github.com/ethersocial/esnwallet/issues"
   },
-  "homepage": "https://github.com/ethersocial/escwallet#readme",
+  "homepage": "https://github.com/ethersocial/esnwallet#readme",
   "dependencies": {
     "babel-runtime": "^6.18.0"
   }

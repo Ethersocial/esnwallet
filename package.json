@@ -1,11 +1,11 @@
 {
-  "name": "escwallet",
+  "name": "esnwallet",
   "version": "0.2.0",
   "license": "GPL-3.0",
   "author": "ESN Wallet<ethersocialcoin@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ethersocial/escwallet.git"
+    "url": "https://github.com/ethersocial/esnwallet.git"
   },
   "scripts": {
     "postinstall": "cd interface && yarn",

@@ -407,12 +407,12 @@ let menuTempl = function (webviews) {
     helpMenu.push({
         label: i18n.t('mist.applicationMenu.help.mistWiki'),
         click() {
-            shell.openExternal('https://github.com/ethersocial/escwallet/wiki');
+            shell.openExternal('https://github.com/ethersocial/esnwallet/wiki');
         },
     }, {
         label: i18n.t('mist.applicationMenu.help.reportBug'),
         click() {
-            shell.openExternal('https://github.com/ethersocial/escwallet/issues');
+            shell.openExternal('https://github.com/ethersocial/esnwallet/issues');
         },
     });
 

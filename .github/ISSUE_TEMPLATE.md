@@ -1,4 +1,4 @@
-- [ ] I've asked for help in the [Mist Gitter](http://gitter.im/ethersocial/escwallet) before filing this issue.
+- [ ] I've asked for help in the [Mist Gitter](http://gitter.im/ethersocial/esnwallet) before filing this issue.
 
 
 <!-- Please fill in these information below: -->
@@ -14,7 +14,7 @@ Number of blocks synchronized: 0
 Check the already existing issues to keep duplicates at a minimum.
 
 
-You'll find possible solutions for these common issues below on Mist Wiki: https://github.com/ethersocial/escwallet/wiki.
+You'll find possible solutions for these common issues below on Mist Wiki: https://github.com/ethersocial/esnwallet/wiki.
 
 - ESN is not shown in the wallet
 - I send ESN to the wallet contract but it doesn't show up

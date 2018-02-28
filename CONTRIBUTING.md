@@ -6,7 +6,7 @@
 
 To help improve EtherSocialWallet , please include the following:
 
-- What do you run?  (_Binary version from [releases](https://github.com/ethersocial/escwallet/releases) or a development version from the [commandline](https://github.com/ethersocial/escwallet#run-mist)_)
+- What do you run?  (_Binary version from [releases](https://github.com/ethersocial/esnwallet/releases) or a development version from the [commandline](https://github.com/ethersocial/esnwallet#run-mist)_)
 - Which version do you use? (_Check the `VERSION` file in the Mist folder_)
 - What OS you're on?
 

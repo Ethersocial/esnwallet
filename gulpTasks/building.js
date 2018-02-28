@@ -139,7 +139,7 @@ gulp.task('build-dist', (cb) => {
         name: applicationName.replace(/\s/, ''),
         productName: applicationName,
         description: applicationName,
-        homepage: 'https://github.com/ethersocial/escwallet',
+        homepage: 'https://github.com/ethersocial/esnwallet',
         build: {
             appId: `org.ethersocial.${type}`,
             asar: true,

@@ -56,11 +56,11 @@ The wallet code can be found at
 https://github.com/ethersocial/meteor-dapp-wallet
 
 And the binary application code, which wraps the wallet app can be found at   
-https://github.com/ethersocial/escwallet/tree/wallet
+https://github.com/ethersocial/esnwallet/tree/wallet
 
 
 
 ## Bundling the wallet
 
 To bundle the binaries yourself follow the instructions on the mist#wallet readme  
-https://github.com/ethersocial/escwallet/tree/wallet#deployment
+https://github.com/ethersocial/esnwallet/tree/wallet#deployment
