@@ -1,6 +1,6 @@
 ESN Wallet
 
-The ESN wallet, which allows you to create simple and multisig wallets to manage your esc.
+The ESN wallet, which allows you to create simple and multisig wallets to manage your esn.
 
 The wallet contains its own node, but can also use an already running one, if the IPC path of that node is the standard path.
 (See below)
@@ -9,7 +9,7 @@ The wallet contains its own node, but can also use an already running one, if th
 
 When you start the wallet on a testnet (e.g. different `--datadir`) you need to make sure to set the `--ipcpath` back to the original one.
 
-On OSX its `~/Library/ESN/geth.ipc` on linux `~/.esc/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
+On OSX its `~/Library/ESN/geth.ipc` on linux `~/.esn/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
 
 Example:
 
@@ -25,7 +25,7 @@ which will be used by the wallet contracts you create.
 The point of the original wallet is that wallet contract creation is cheaper,
 as not the full code has to be deployed for every wallet.
 
-You need to make sure that the account displayed for the original wallet creation is unlocked and has at least 1 esc.
+You need to make sure that the account displayed for the original wallet creation is unlocked and has at least 1 esn.
 
 
 ## Paths
@@ -40,7 +40,7 @@ The wallet stores its data at:
 The nodes data is stored at:
 - Mac: ~/Library/ESN
 - Windows: %APPDATA%\Roaming\ESN
-- Linux: ~/.esc
+- Linux: ~/.esn
 
 
 ## Issues

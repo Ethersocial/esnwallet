@@ -277,7 +277,7 @@ class Settings {
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
-            ipcPath += '/.esc/gesc.ipc';
+            ipcPath += '/.esn/gesc.ipc';
         } else if (process.platform === 'win32') {
             ipcPath = '\\\\.\\pipe\\gesc.ipc';
         }

@@ -85,7 +85,7 @@
             "requiredSignatures": "サインをして下さい",
             "owners": "持ち主",
             "walletsDescription": "これらの契約はブロックチェーン上に保管され、escを安全に保管できます。オーナーとしてマルチプルアカウントを保有することができ、全てのトランザクションのログを見ることができます。",
-            "walletsDescriptionNotEnoughFunds": "１esc以上保有しているとより高度な契約ができる様になります。Once you have more than 1 esc you can create a more sophisticated contracts. ウォレットはベーシックなスマートコントラクトの一種で、資金をマルチプルアカウントで管理し、セキュリティー増強のためにオプションで１日当たりの引き出し制限することもできます。 カスタムコントラクトを作るには <em> コントラクト </em> タブ",
+            "walletsDescriptionNotEnoughFunds": "１esc以上保有しているとより高度な契約ができる様になります。Once you have more than 1 esn you can create a more sophisticated contracts. ウォレットはベーシックなスマートコントラクトの一種で、資金をマルチプルアカウントで管理し、セキュリティー増強のためにオプションで１日当たりの引き出し制限することもできます。 カスタムコントラクトを作るには <em> コントラクト </em> タブ",
             "accountsDescription": "アカウントはescを保有できる、パスワードで保護されたキーです、イーサリアムベースのトークンかコインを保全しコントラクトを管理します。アカウントは入ってくる取引を表示できません。",
             "buttons": {
                 "deposit": "ESNをデポジット",
@@ -259,7 +259,7 @@
                 "noCodeInRecipient": "受領者アカウントはコントラクトではありません、何も実行することはできません。 <strong> コントラクトアドレスを'TO' に入れてください。 </strong>",
                 "addData": "トランザクションにデータを付与することができます。もし\"to\" の項目を空欄にするとデータを元にコントラクトを配置しようとします。",
                 "dataNotExecutable": "実行可能なデータではないようです、 that means this transaction will use all the gas you provide.",
-                "cantEstimateGas": "We can't estimate your gas usage properly, as you need at least 1 esc in your account.",
+                "cantEstimateGas": "We can't estimate your gas usage properly, as you need at least 1 esn in your account.",
                 "estimatedGas": "必要とされるガスの推定",
                 "timeTexts": {
                     "0": "数分以内かそれ以上",

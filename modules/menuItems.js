@@ -217,7 +217,7 @@ let menuTempl = function (webviews) {
                                 if (process.platform === 'freebsd' ||
                                 process.platform === 'linux' ||
                                 process.platform === 'sunos') {
-                                    userPath += '/.esc/keystore';
+                                    userPath += '/.esn/keystore';
                                 }
 
                                 if (process.platform === 'win32') {
