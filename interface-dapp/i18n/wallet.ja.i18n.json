@@ -88,7 +88,7 @@
             "walletsDescriptionNotEnoughFunds": "１esc以上保有しているとより高度な契約ができる様になります。Once you have more than 1 esc you can create a more sophisticated contracts. ウォレットはベーシックなスマートコントラクトの一種で、資金をマルチプルアカウントで管理し、セキュリティー増強のためにオプションで１日当たりの引き出し制限することもできます。 カスタムコントラクトを作るには <em> コントラクト </em> タブ",
             "accountsDescription": "アカウントはescを保有できる、パスワードで保護されたキーです、イーサリアムベースのトークンかコインを保全しコントラクトを管理します。アカウントは入ってくる取引を表示できません。",
             "buttons": {
-                "deposit": "ESCをデポジット",
+                "deposit": "ESNをデポジット",
                 "depositBitcoin": "Bitcoinを使ってデポジット",
                 "viewOnExplorer": "View on Etherscan",
                 "copyAddress": "アドレスをコピー",

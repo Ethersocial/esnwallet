@@ -18,7 +18,7 @@ The available units
 */
 selectableUnits = [{
     text: 'ESN',
-    value: 'esc'
+    value: 'esn'
 }];
 
 

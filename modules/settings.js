@@ -205,7 +205,7 @@ class Settings {
     }
 
     get appName() {
-        return 'ESCwallet';
+        return 'ESNwallet';
     }
 
     get appLicense() {
