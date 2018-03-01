@@ -255,7 +255,7 @@
             "texts": {
                 "ownerPaysGas": "개스는 지갑 컨트랙트의 소유자에 의해 지불되었습니다.",
                 "sendAmount": "보내고자하는 금액은 <strong>__amount__</strong> ESN 입니다.",
-                "sendAmountEquivalent": "보내고자 하는 금액은 <strong>__amount__</strong> ESN이고, 교환비율은 <a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">cryptocompare.com</a> 에 근거하였으며, <br>현재 <strong>__etherAmount__ </strong>만큼의 ESC입니다.",
+                "sendAmountEquivalent": "보내고자 하는 금액은 <strong>__amount__</strong> ESN이고, 교환비율은 <a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">cryptocompare.com</a> 에 근거하였으며, <br>현재 <strong>__etherAmount__ </strong>만큼의 ESN입니다.",
                 "sendToken": "<strong> __name__</strong>, <strong>__amount__ __symbol__</strong>을 보내고자 합니다.",
                 "overDailyLimit": "<p class=\"over-daily\">이 금액은 현재 남은 일일 제한 금액인 __limit__ (총 일일 한도 __total__)을 초과합니다, 따라서 __count__ 개의 다른 계정의 승인이 필요합니다.</p>",
                 "overDailyLimit_plural": "<p class=\"over-daily\">이 금액은 현재 남은 일일 제한 금액인 __limit__ (일일 한도 __total__)을 초과합니다, 따라서 __count__ 개의 다른 계정의 승인이 필요합니다.</p>",

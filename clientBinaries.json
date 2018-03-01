@@ -1,6 +1,6 @@
 {
     "clients": {
-        "Gesc": {
+        "Gesn": {
             "version": "0.2.0",
             "platforms": {
                 "win": {
@@ -18,7 +18,7 @@
                                     "version"
                                 ],
                                 "output": [
-                                    "Gesc",
+                                    "Gesn",
                                     "0.2.0"
                                 ]
                             }
@@ -38,7 +38,7 @@
 					                "version"
 					            ],
 					            "output": [
-					                "Gesc",
+					                "Gesn",
 					                "0.2.0"
 					            ]
 					        }
