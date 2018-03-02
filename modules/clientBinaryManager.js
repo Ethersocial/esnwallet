@@ -15,7 +15,7 @@ const log = require('./utils/logger').create('ClientBinaryManager');
 
 
 // should be       'https://raw.githubusercontent.com/ethersocial/mist/master/clientBinaries.json'
-const BINARY_URL = 'https://www.ethersocial.network/download/clientBinaries.json';
+const BINARY_URL = 'https://www.ethersocial.org/download/clientBinaries.json';
 
 const ALLOWED_DOWNLOAD_URLS_REGEX =
     /^https:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?ethersocial\.org\/download\/|gethstore\.blob\.core\.windows\.net\/|bintray\.com\/artifact\/download\/karalabe\/ethereum\/)(?:.+)/;  // eslint-disable-line max-len
