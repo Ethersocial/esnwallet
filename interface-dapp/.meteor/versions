@@ -32,10 +32,11 @@ ecmascript@0.4.3
 ecmascript-runtime@0.2.10
 ejson@1.0.11
 ethereum:dapp-styles@0.5.7
-ethersocial:accounts@0.1.4
-ethersocial:blocks@0.1.2
-ethersocial:elements@0.1.3
-ethersocial:web3@0.1.2
+ethersocial:accounts@0.1.5
+ethersocial:blocks@0.1.5
+ethersocial:elements@0.1.5
+ethersocial:tools@0.1.5
+ethersocial:web3@0.1.5
 fastclick@1.0.11
 frozeman:animation-helper@0.2.6
 frozeman:global-notifications@0.2.1
