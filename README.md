@@ -123,7 +123,7 @@ $ yarn dev:electron --rpc http://localhost:8545
 ```
 
 
-### Passing options to Gesc
+### Passing options to Geth
 
 You can pass command-line options directly to Geth by prefixing them with `--node-` in
 the command-line invocation:
@@ -136,14 +136,14 @@ The `--rpc` EtherSocialWallet option is a special case. If you set this to an IP
 path then the `--ipcpath` option automatically gets set, i.e.:
 
 ```bash
-$ yarn dev:electron --rpc /my/gesc.ipc
+$ yarn dev:electron --rpc /my/geth.ipc
 ```
 
 ...is the same as doing...
 
 
 ```bash
-$ yarn dev:electron --rpc /my/gesc.ipc --node-ipcpath /my/gesc.ipc
+$ yarn dev:electron --rpc /my/geth.ipc --node-ipcpath /my/geth.ipc
 ```
 
 ### Creating a local private net
@@ -158,13 +158,13 @@ To run a private network you will need to set the IPC path, network id and data
 folder:
 
 ```bash
-$ yarn dev:electron --rpc ~/Library/ESN/gesc.ipc --node-networkid 1234 --node-datadir ~/Library/ESN/privatenet
+$ yarn dev:electron --rpc ~/Library/ESN/geth.ipc --node-networkid 1234 --node-datadir ~/Library/ESN/privatenet
 ```
 
 _NOTE: since `ipcpath` is also a Mist option you do not need to also include a
 `--node-ipcpath` option._
 
-You can also launch `gesc` separately with the same options prior starting
+You can also launch `geth` separately with the same options prior starting
 Mist.
 
 

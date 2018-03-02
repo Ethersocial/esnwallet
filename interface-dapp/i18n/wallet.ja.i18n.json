@@ -23,8 +23,8 @@
             "texts": {
                 "note": "ノート",
                 "balance": "残高",
-                "connectionErrorMist": "接続不可。 gesc を使用して下さい。:<br><br><small><code>__node__</code><br><br>IPC pathがデフォルトのものかを確認して下さい、違うものを使用している場合は <code>datadir</code>, e.g.<br><code>gesc --datadir ... --ipcpath /Users/&lt;yourUser&gt;/Library/ESN/gesc.ipc</code><br>or<br><code>gesc --datadir ... --ipcpath /Users/&lt;yourUser&gt;/.esceum/gesc.ipc</code>. <br><br>Optional add: <code>--unlock &lt;yourAccount&gt;.</code></small>",
-                "connectionErrorBrowser": "接続不可。以下のオプションから gesc を開始して下さい:<br><br><small><code>__node__</code><br><br>Optional add: <code>--unlock &lt;yourAccount&gt;.</code></small>",
+                "connectionErrorMist": "接続不可。 geth を使用して下さい。:<br><br><small><code>__node__</code><br><br>IPC pathがデフォルトのものかを確認して下さい、違うものを使用している場合は <code>datadir</code>, e.g.<br><code>geth --datadir ... --ipcpath /Users/&lt;yourUser&gt;/Library/ESN/geth.ipc</code><br>or<br><code>geth --datadir ... --ipcpath /Users/&lt;yourUser&gt;/.esceum/geth.ipc</code>. <br><br>Optional add: <code>--unlock &lt;yourAccount&gt;.</code></small>",
+                "connectionErrorBrowser": "接続不可。以下のオプションから geth を開始して下さい:<br><br><small><code>__node__</code><br><br>Optional add: <code>--unlock &lt;yourAccount&gt;.</code></small>",
                 "pendingConfirmationsBadge": "確認中!",
                 "nodeSyncing": "__blockDiff__ blocks left",
                 "blockReceived": "新ブロック受信",
