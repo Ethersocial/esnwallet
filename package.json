@@ -5,7 +5,7 @@
   "author": "ESN Wallet<ethersocialcoin@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ethersocial/esnwallet.git"
+    "url": "https://github.com/ethersocial/escwallet.git"
   },
   "scripts": {
     "postinstall": "cd interface && yarn",
