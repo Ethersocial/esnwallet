@@ -13,7 +13,7 @@ On OSX its `~/Library/ESN/geth.ipc` on linux `~/.esn/geth.ipc` and on windows it
 
 Example:
 
-    $ gesc --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/ESN/geth.ipc
+    $ geth --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/ESN/geth.ipc
 
 
 

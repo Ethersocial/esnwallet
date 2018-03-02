@@ -523,16 +523,16 @@ let menuTempl = function (webviews) {
         const nodeSubmenu = [];
 
         const ethClient = ClientBinaryManager.getClient('eth');
-        const gethClient = ClientBinaryManager.getClient('gesc');
+        const gethClient = ClientBinaryManager.getClient('geth');
 
         if (gethClient) {
             nodeSubmenu.push({
-                label: `Gesc ${gethClient.version}`,
+                label: `Geth ${gethClient.version}`,
                 checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
                 enabled: ethereumNode.isOwnNode,
                 type: 'checkbox',
                 click() {
-                    restartNode('gesc', null, 'fast', webviews);
+                    restartNode('geth', null, 'fast', webviews);
                 },
             });
         }

@@ -11,7 +11,7 @@ const EventEmitter = require('events').EventEmitter;
 const Sockets = require('./socketManager');
 const ClientBinaryManager = require('./clientBinaryManager');
 
-const DEFAULT_NODE_TYPE = 'gesc';
+const DEFAULT_NODE_TYPE = 'geth';
 const DEFAULT_NETWORK = 'main';
 const DEFAULT_SYNCMODE = 'fast';
 
@@ -77,7 +77,7 @@ class EthereumNode extends EventEmitter {
     }
 
     get isGeth() {
-        return this._type === 'gesc';
+        return this._type === 'geth';
     }
 
     get isGesc() {
@@ -321,7 +321,7 @@ class EthereumNode extends EventEmitter {
 
                 // if unable to start eth node then write geth to defaults
                 if (nodeType === 'eth') {
-                    Settings.saveUserData('node', 'gesc');
+                    Settings.saveUserData('node', 'geth');
                 }
 
                 throw err;
@@ -416,7 +416,7 @@ class EthereumNode extends EventEmitter {
 
                 // Starts Main net
                 default:
-                    args = (nodeType === 'gesc')
+                    args = (nodeType === 'geth')
                         ? [
                             '--syncmode', syncMode,
                             '--cache', ((process.arch === 'x64') ? '1024' : '512')
@@ -465,9 +465,9 @@ class EthereumNode extends EventEmitter {
                     if (STATES.STARTING === this.state) {
                         const dataStr = data.toString().toLowerCase();
 
-                        if (nodeType === 'gesc') {
+                        if (nodeType === 'geth') {
                             if (dataStr.indexOf('fatal: error') >= 0) {
-                                const error = new Error(`Gesc error: ${dataStr}`);
+                                const error = new Error(`Geth error: ${dataStr}`);
 
                                 if (dataStr.indexOf('bind') >= 0) {
                                     error.tag = UNABLE_TO_BIND_PORT_ERROR;

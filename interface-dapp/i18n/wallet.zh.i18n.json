@@ -23,8 +23,8 @@
             "texts": {
                 "note": "备注",
                 "balance": "余额",
-                "connectionErrorMist": "无法连线。请用下列指令启动 gesc:<br><br><small><code>__node__</code><br><br>当使用不同<code>datadir</code>时，请确认将 IPC 路径设到默认值的，也就是：<br><code>gesc --datadir ... --ipcpath /Users/&lt;yourUser&gt;/Library/ESN/gesc.ipc</code><br>or<br><code>gesc --datadir ... --ipcpath /Users/&lt;yourUser&gt;/.esceum/gesc.ipc</code>. <br><br>或加上：<code>--unlock &lt;yourAccount&gt;.</code></small>",
-                "connectionErrorBrowser": "无法连线，请使用下列方式启动 gesc 。<br><br><small><code>__node__</code><br><br>或加上：<code>--unlock &lt;yourAccount&gt;.</code></small>",
+                "connectionErrorMist": "无法连线。请用下列指令启动 geth:<br><br><small><code>__node__</code><br><br>当使用不同<code>datadir</code>时，请确认将 IPC 路径设到默认值的，也就是：<br><code>geth --datadir ... --ipcpath /Users/&lt;yourUser&gt;/Library/ESN/geth.ipc</code><br>or<br><code>geth --datadir ... --ipcpath /Users/&lt;yourUser&gt;/.esceum/geth.ipc</code>. <br><br>或加上：<code>--unlock &lt;yourAccount&gt;.</code></small>",
+                "connectionErrorBrowser": "无法连线，请使用下列方式启动 geth 。<br><br><small><code>__node__</code><br><br>或加上：<code>--unlock &lt;yourAccount&gt;.</code></small>",
                 "pendingConfirmationsBadge": "确认等待中！",
                 "nodeSyncing": "剩下 __blockDiff__ 块",
                 "blockReceived": "收到新的区块",
