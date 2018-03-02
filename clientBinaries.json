@@ -6,40 +6,40 @@
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "https://www.ethersocial.org/download/gesc-win-amd64-0.2.0.zip",
+                            "url": "https://www.ethersocial.net/download/geth-win-amd64-0.2.2.zip",
                             "type": "zip",
-                            "md5": "BB3AB8B7C6909453490623E6B1B161B5",
-                            "bin": "gesc-win-amd64-0.2.0\\gesc.exe"
+                            "md5": "2f6c7d22466b651e07fe5311b5069016",
+                            "bin": "geth-win-amd64-0.2.2\\geth.exe"
                         },
-                        "bin": "gesc.exe",
+                        "bin": "geth.exe",
                         "commands": {
                             "sanity": {
                                 "args": [
                                     "version"
                                 ],
                                 "output": [
-                                    "Gesn",
-                                    "0.2.0"
+                                    "Geth",
+                                    "0.2.2"
                                 ]
                             }
                         }
                     },
 					"ia32": {
 					    "download": {
-					        "url": "https://www.ethersocial.org/download/gesc-win-386-0.2.0.zip",
+					        "url": "https://www.ethersocial.org/download/geth-win-386-0.2.2.zip",
 					        "type": "zip",
-					        "md5": "BB3AB8B7C6909453490623E6B1B161B5",
-					        "bin": "gesc-win-386-0.2.0\\gesc.exe"
+					        "md5": "76fef51abab07ac85229af698e86f492",
+					        "bin": "geth-win-386-0.2.2\\geth.exe"
 					    },
-					    "bin": "gesc.exe",
+					    "bin": "geth.exe",
 					    "commands": {
 					        "sanity": {
 					            "args": [
 					                "version"
 					            ],
 					            "output": [
-					                "Gesn",
-					                "0.2.0"
+					                "Geth",
+					                "0.2.2"
 					            ]
 					        }
 					    }
