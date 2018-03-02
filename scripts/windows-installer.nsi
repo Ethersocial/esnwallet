@@ -71,10 +71,10 @@ ${EndIf}
 
     ${If} ${RunningX64}
       StrCpy $FILEDIR "$PROGRAMFILES64\${APPNAME}"
-      StrCpy $ARCHDIR "win-unpacked"
+      StrCpy $ARCHDIR "esn-wallet-win64"
     ${Else}
       StrCpy $FILEDIR "$PROGRAMFILES32\${APPNAME}"
-      StrCpy $ARCHDIR "win-ia32-unpacked"
+      StrCpy $ARCHDIR "esn-wallet-win32"
     ${Endif}
 
     SetShellVarContext all
@@ -143,10 +143,10 @@ Section Mist MIST_IDX
     # Extract the zip file from TEMP to the user's selected installation directory
     ${If} ${RunningX64}
       ZipDLL::extractALL "$TEMP\${APPNAME}-win64-${VERSIONMAJOR}-${VERSIONMINOR}-${VERSIONBUILD}.zip" "$FILEDIR"
-      StrCpy $ARCHDIR "win-unpacked"
+      StrCpy $ARCHDIR "esn-wallet-win64"
     ${Else}
       ZipDLL::extractALL "$TEMP\${APPNAME}-win32-${VERSIONMAJOR}-${VERSIONMINOR}-${VERSIONBUILD}.zip" "$FILEDIR"
-      StrCpy $ARCHDIR "win-ia32-unpacked"
+      StrCpy $ARCHDIR "esn-wallet-win32"
     ${Endif}
 
     # Move files out of subfolder

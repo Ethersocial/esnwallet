@@ -54,7 +54,7 @@
                 "title": "選擇一個帳戶"
             },
             "testnetWallet": {
-                "walletNeedsDeployment": "您似乎在 testnet 上。<br><br>沒有發現任何原始錢包契約程式碼，我們需要從您的位址佈署一個，可讓錢包契約的 stub contract 使用：<br><br><small><code>__account__</code></small><br><br><em>請確認這個地址至少有 1 esc！</em>",
+                "walletNeedsDeployment": "您似乎在 testnet 上。<br><br>沒有發現任何原始錢包契約程式碼，我們需要從您的位址佈署一個，可讓錢包契約的 stub contract 使用：<br><br><small><code>__account__</code></small><br><br><em>請確認這個地址至少有 1 esn！</em>",
                 "testnetWalletDeployed": "原始錢包契約佈署了！<br>一個原始錢包契約佈署在位址：<br><br><small><code>__address__</code></small>."
             },
             "addToken": {
