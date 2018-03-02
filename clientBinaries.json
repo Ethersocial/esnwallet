@@ -26,7 +26,7 @@
                     },
 					"ia32": {
 					    "download": {
-					        "url": "https://www.ethersocial.org/download/geth-win-386-0.2.2.zip",
+					        "url": "https://www.ethersocial.net/download/geth-win-386-0.2.2.zip",
 					        "type": "zip",
 					        "md5": "76fef51abab07ac85229af698e86f492",
 					        "bin": "geth-win-386-0.2.2\\geth.exe"
