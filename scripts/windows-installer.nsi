@@ -27,8 +27,8 @@ RequestExecutionLevel admin
 
 !searchreplace APPNAMENOHYPEN ${APPNAME} "-" " "
 !define GROUPNAME "Ethereum"
-!define HELPURL "https://github.com/ethersocial/escwallet/releases/issues"
-!define UPDATEURL "https://github.com/ethersocial/escwallet/releases"
+!define HELPURL "https://github.com/ethersocial/esnwallet/releases/issues"
+!define UPDATEURL "https://github.com/ethersocial/esnwallet/releases"
 !define ABOUTURL "https://ethersocial.org"
 !define /date NOW "%Y%m%d"
 
@@ -65,16 +65,16 @@ ${EndIf}
 
     SetShellVarContext current
     StrCpy $DATADIR "$APPDATA\${APPNAME}"
-    StrCpy $NODEDATADIR "$APPDATA\ESC"
+    StrCpy $NODEDATADIR "$APPDATA\ESN"
     StrCpy $SHORTCUTDIR "$SMPROGRAMS\${APPNAMENOHYPEN}"
     StrCpy $DESKTOPDIR "$DESKTOP"
 
     ${If} ${RunningX64}
       StrCpy $FILEDIR "$PROGRAMFILES64\${APPNAME}"
-      StrCpy $ARCHDIR "win-unpacked"
+      StrCpy $ARCHDIR "esn-wallet-win64"
     ${Else}
       StrCpy $FILEDIR "$PROGRAMFILES32\${APPNAME}"
-      StrCpy $ARCHDIR "win-ia32-unpacked"
+      StrCpy $ARCHDIR "esn-wallet-win32"
     ${Endif}
 
     SetShellVarContext all
@@ -143,10 +143,10 @@ Section Mist MIST_IDX
     # Extract the zip file from TEMP to the user's selected installation directory
     ${If} ${RunningX64}
       ZipDLL::extractALL "$TEMP\${APPNAME}-win64-${VERSIONMAJOR}-${VERSIONMINOR}-${VERSIONBUILD}.zip" "$FILEDIR"
-      StrCpy $ARCHDIR "win-unpacked"
+      StrCpy $ARCHDIR "esn-wallet-win64"
     ${Else}
       ZipDLL::extractALL "$TEMP\${APPNAME}-win32-${VERSIONMAJOR}-${VERSIONMINOR}-${VERSIONBUILD}.zip" "$FILEDIR"
-      StrCpy $ARCHDIR "win-ia32-unpacked"
+      StrCpy $ARCHDIR "esn-wallet-win32"
     ${Endif}
 
     # Move files out of subfolder

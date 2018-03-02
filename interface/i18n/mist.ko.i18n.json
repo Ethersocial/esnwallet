@@ -62,7 +62,7 @@
             },
             "help": {
                 "label": "도움말",
-                "mistWiki": "ESC지갑 위키",
+                "mistWiki": "ESN지갑 위키",
                 "reportBug": "이슈 리포트 보고하기"
             }
         },
@@ -95,14 +95,14 @@
             "blockReceived": "새 블록을 받았음",
             "blockNumber": "마지막 블록 번호",
             "timeSinceBlock": "마지막 블록 이후 경과시간",
-            "testnetExplain": "현재 테스트넷 상에 있습니다. 진짜 ESC를 이 주소로 절대 보내지 마세요.",
+            "testnetExplain": "현재 테스트넷 상에 있습니다. 진짜 ESN을 이 주소로 절대 보내지 마세요.",
             "peers": "피어들(peers)",
             "checkingWhichNetwork": "네트워크 확인중...",
             "mainNetwork": "메인 네트워크",
             "testNetwork": "테스트 네트워크",
             "privateNetwork": "프라이빗 네트워크",
             "mainnetExplain": "이더소셜의 메인 글로벌 네트워크에 연결되었습니다.",
-            "privatenetExplain": "프라이빗 네트워크에 연결되어 있습니다. \"절대로 \" 실제 ESC를 이 주소로 보내지 마세요.",
+            "privatenetExplain": "프라이빗 네트워크에 연결되어 있습니다. \"절대로 \" 실제 ESN을 이 주소로 보내지 마세요.",
             "unknownnetExplain": "현재 사용중인 네트워크를 확인할 수 없습니다."
         },
         "sidebar": {
@@ -179,7 +179,7 @@
                 "estimatedFee": "예상 수수료 사용량",
                 "estimatedGasError": "데이더를 실행할 수 없었습니다. 따라서 제공했던 개스를 모두 소모할 것입니다.",
                 "gasPrice": "개스 가격",
-                "perMillionGas": "백만 개스당 ESC수",
+                "perMillionGas": "백만 개스당 ESN수",
                 "gasLimit": "최고 수수료 제공",
                 "data": "데이터",
                 "buttons": {
@@ -205,9 +205,9 @@
             "onboarding": {
                 "description": "이더소셜은 블록체인상에 앱을 만들기 위한 탈중앙화된 플랫폼이며, 이 블록체인은 변조방지가능한 소프트웨어로서 가치와 자산을 전송할 수 있고 영구히 존속합니다.",
                 "goToTestnet": "테스트 네트워크 사용하기 (Rinkeby)",
-                "goToTestnetDescription": "샌드박스 테스트넷에서 실제 ESC를 사용하지 않고 자유롭게 테스트하기.",
+                "goToTestnetDescription": "샌드박스 테스트넷에서 실제 ESN을 사용하지 않고 자유롭게 테스트하기.",
                 "gotoMainnet": "메인 네트워크 사용하기",
-                "gotoMainnetDescription": "계약을 만들고 사용하기 위해서는 약간의 ESC가 필요합니다. 약간의 ESC를 가질 수 있도록 도와줄 수 있습니다.",
+                "gotoMainnetDescription": "계약을 만들고 사용하기 위해서는 약간의 ESN이 필요합니다. 약간의 ESN를 가질 수 있도록 도와줄 수 있습니다.",
                 "doYouHaveAWalletFile": "지갑 파일을 가지고 있나요?",
                 "walletFileDescription": "<p>만일 2018년 이더소셜 프리세일에 참여했다면, <code>ethersocial_wallet_backup.json</code> 이란 파일을 가지고 있을 겁니다.</p>",
                 "dropFilesHere": "프리세일 파일을 가져다 놓기",
@@ -219,9 +219,9 @@
                 "protectDescription": "새 계정를 위한 암호를 선택하세요. 집열쇠를 보관하듯이 강력한 암호를 선택하세요!",
                 "accountTitle": "구동 시작!",
                 "accountTitleTestnet": "채굴 성공!",
-                "etherDescription": "이더소셜은 'ESC'라는 토큰을 기반으로 하고 있습니다. 이더소셜을 사용하기 위해서는 약간의 ESC가 필요하게 될 것입니다.",
-                "loadItDescription": "만일 비트코인이나 다른 암호화 화폐를 가지고 있다면, shapeshift를 이용해 손쉽게 ESC로 바꿀 수 있습니다. <br><br> 약 <strong>0.25 to 1 ESC</strong> ESC 정도를 바꿀 것을 추천합니다.",
-                "mineItDescription": "<strong>테스트넷상에서는 <em>개발</em> 메뉴에 있는 <em>채굴 시작</em>을 선택함으로써 ESC를 채굴할 수 있습니다. </strong> <br> <strong>이 주소로 진짜 ESC를 절대 보내지 마세요.</strong>",
+                "etherDescription": "이더소셜은 'ESN'라는 토큰을 기반으로 하고 있습니다. 이더소셜을 사용하기 위해서는 약간의 ESN이 필요하게 될 것입니다.",
+                "loadItDescription": "만일 비트코인이나 다른 암호화 화폐를 가지고 있다면, shapeshift를 이용해 손쉽게 ESN으로 바꿀 수 있습니다. <br><br> 약 <strong>0.25 to 1 ESN</strong> ESN 정도를 바꿀 것을 추천합니다.",
+                "mineItDescription": "<strong>테스트넷상에서는 <em>개발</em> 메뉴에 있는 <em>채굴 시작</em>을 선택함으로써 ESN을 채굴할 수 있습니다. </strong> <br> <strong>이 주소로 진짜 ESN을 절대 보내지 마세요.</strong>",
                 "you": "당신",
                 "etherbase": "주 계정(Main acount)",
                 "depositBitcoin": "비트코인 송금",

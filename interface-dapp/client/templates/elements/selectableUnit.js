@@ -17,8 +17,8 @@ The available units
 @property selectableUnits
 */
 selectableUnits = [{
-    text: 'ESC',
-    value: 'esc'
+    text: 'ESN',
+    value: 'esn'
 }];
 
 

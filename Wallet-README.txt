@@ -1,6 +1,6 @@
-ESC Wallet
+ESN Wallet
 
-The ESC wallet, which allows you to create simple and multisig wallets to manage your esc.
+The ESN wallet, which allows you to create simple and multisig wallets to manage your esn.
 
 The wallet contains its own node, but can also use an already running one, if the IPC path of that node is the standard path.
 (See below)
@@ -9,11 +9,11 @@ The wallet contains its own node, but can also use an already running one, if th
 
 When you start the wallet on a testnet (e.g. different `--datadir`) you need to make sure to set the `--ipcpath` back to the original one.
 
-On OSX its `~/Library/ESC/geth.ipc` on linux `~/.esc/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
+On OSX its `~/Library/ESN/geth.ipc` on linux `~/.esn/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
 
 Example:
 
-    $ gesc --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/ESC/geth.ipc
+    $ gesc --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/ESN/geth.ipc
 
 
 
@@ -25,7 +25,7 @@ which will be used by the wallet contracts you create.
 The point of the original wallet is that wallet contract creation is cheaper,
 as not the full code has to be deployed for every wallet.
 
-You need to make sure that the account displayed for the original wallet creation is unlocked and has at least 1 esc.
+You need to make sure that the account displayed for the original wallet creation is unlocked and has at least 1 esn.
 
 
 ## Paths
@@ -38,9 +38,9 @@ The wallet stores its data at:
 - Linux: ~/.config/Ethersocial
 
 The nodes data is stored at:
-- Mac: ~/Library/ESC
-- Windows: %APPDATA%\Roaming\ESC
-- Linux: ~/.esc
+- Mac: ~/Library/ESN
+- Windows: %APPDATA%\Roaming\ESN
+- Linux: ~/.esn
 
 
 ## Issues
@@ -56,11 +56,11 @@ The wallet code can be found at
 https://github.com/ethersocial/meteor-dapp-wallet
 
 And the binary application code, which wraps the wallet app can be found at   
-https://github.com/ethersocial/escwallet/tree/wallet
+https://github.com/ethersocial/esnwallet/tree/wallet
 
 
 
 ## Bundling the wallet
 
 To bundle the binaries yourself follow the instructions on the mist#wallet readme  
-https://github.com/ethersocial/escwallet/tree/wallet#deployment
+https://github.com/ethersocial/esnwallet/tree/wallet#deployment

@@ -145,13 +145,13 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
                     }
                 // geth
                 } else {
-                    if (process.platform === 'darwin') keystorePath += '/Library/ESC/keystore';
+                    if (process.platform === 'darwin') keystorePath += '/Library/ESN/keystore';
 
                     if (process.platform === 'freebsd' ||
                         process.platform === 'linux' ||
                         process.platform === 'sunos') keystorePath += '/.ethereum/keystore';
 
-                    if (process.platform === 'win32') keystorePath = `${Settings.appDataPath}\\ESC\\keystore`;
+                    if (process.platform === 'win32') keystorePath = `${Settings.appDataPath}\\ESN\\keystore`;
                 }
 
                 if (!/^[0-9a-fA-F]{40}$/.test(keyfile.address)) {

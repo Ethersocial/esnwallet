@@ -13,7 +13,7 @@ const version = require('../package.json').version;
 
 
 const type = options.type;
-const applicationName = (options.wallet) ? 'ESCwallet' : 'Mist';
+const applicationName = (options.wallet) ? 'ESNwallet' : 'Mist';
 
 
 gulp.task('clean-dist', (cb) => {
@@ -139,7 +139,7 @@ gulp.task('build-dist', (cb) => {
         name: applicationName.replace(/\s/, ''),
         productName: applicationName,
         description: applicationName,
-        homepage: 'https://github.com/ethersocial/escwallet',
+        homepage: 'https://github.com/ethersocial/esnwallet',
         build: {
             appId: `org.ethersocial.${type}`,
             asar: true,

@@ -211,17 +211,17 @@ let menuTempl = function (webviews) {
                             // geth
                             } else {
                                 if (process.platform === 'darwin') {
-                                    userPath += '/Library/ESC/keystore';
+                                    userPath += '/Library/ESN/keystore';
                                 }
 
                                 if (process.platform === 'freebsd' ||
                                 process.platform === 'linux' ||
                                 process.platform === 'sunos') {
-                                    userPath += '/.esc/keystore';
+                                    userPath += '/.esn/keystore';
                                 }
 
                                 if (process.platform === 'win32') {
-                                    userPath = `${Settings.appDataPath}\\ESC\\keystore`;
+                                    userPath = `${Settings.appDataPath}\\ESN\\keystore`;
                                 }
                             }
 
@@ -407,12 +407,12 @@ let menuTempl = function (webviews) {
     helpMenu.push({
         label: i18n.t('mist.applicationMenu.help.mistWiki'),
         click() {
-            shell.openExternal('https://github.com/ethersocial/escwallet/wiki');
+            shell.openExternal('https://github.com/ethersocial/esnwallet/wiki');
         },
     }, {
         label: i18n.t('mist.applicationMenu.help.reportBug'),
         click() {
-            shell.openExternal('https://github.com/ethersocial/escwallet/issues');
+            shell.openExternal('https://github.com/ethersocial/esnwallet/issues');
         },
     });
 
