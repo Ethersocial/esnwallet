@@ -527,7 +527,7 @@ let menuTempl = function (webviews) {
 
         if (gethClient) {
             nodeSubmenu.push({
-                label: `Geth ${gethClient.version}`,
+                label: `Gesc ${gethClient.version}`,
                 checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
                 enabled: ethereumNode.isOwnNode,
                 type: 'checkbox',
