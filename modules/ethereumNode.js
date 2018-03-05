@@ -362,7 +362,7 @@ class EthereumNode extends EventEmitter {
      */
     __startProcess(nodeType, network, binPath, _syncMode) {
         let syncMode = _syncMode;
-        if (nodeType === 'gesc' && !syncMode) {
+        if (nodeType === 'geth' && !syncMode) {
             syncMode = 'fast';
         }
 
