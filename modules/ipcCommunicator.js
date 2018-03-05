@@ -145,11 +145,11 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
                     }
                 // geth
                 } else {
-                    if (process.platform === 'darwin') keystorePath += '/Library/ESN/keystore';
+                    if (process.platform === 'darwin') keystorePath += '/Library/Ethersocial/keystore';
 
                     if (process.platform === 'freebsd' ||
                         process.platform === 'linux' ||
-                        process.platform === 'sunos') keystorePath += '/.ethereum/keystore';
+                        process.platform === 'sunos') keystorePath += '/.Ethersocial/keystore';
 
                     if (process.platform === 'win32') keystorePath = `${Settings.appDataPath}\\ESN\\keystore`;
                 }
@@ -182,12 +182,12 @@ ipc.on('backendAction_importWalletFile', (e, path, pw) => {
     const ClientBinaryManager = require('./clientBinaryManager');  // eslint-disable-line global-require
     let error = false;
 
-    const binPath = ClientBinaryManager.getClient('geth').binPath;
+    const binPath = ClientBinaryManager.getClient('gesc').binPath;
     const nodeProcess = spawn(binPath, ['wallet', 'import', path]);
 
     nodeProcess.once('error', () => {
         error = true;
-        e.sender.send('uiAction_importedWalletFile', 'Couldn\'t start the "geth wallet import <file.json>" process.');
+        e.sender.send('uiAction_importedWalletFile', 'Couldn\'t start the "gesc wallet import <file.json>" process.');
     });
     nodeProcess.stdout.on('data', (_data) => {
         const data = _data.toString();
