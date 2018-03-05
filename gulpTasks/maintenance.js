@@ -15,10 +15,10 @@ const clientBinaries = require('../clientBinaries.json');
 
 
 gulp.task('update-nodes', (cb) => {
-    const clientBinariesGeth = clientBinaries.clients.Geth;
+    const clientBinariesGeth = clientBinaries.clients.Gesc;
     const localGethVersion = clientBinariesGeth.version;
     const newJson = clientBinaries;
-    const geth = newJson.clients.Geth;
+    const gesc = newJson.clients.Gesc;
 
     // Query latest geth version
     got('https://www.ethersocial.network/download/releases_latest.json', { json: true })
@@ -31,7 +31,7 @@ gulp.task('update-nodes', (cb) => {
 
         // Compare to current geth version in clientBinaries.json
         if (cmp(latestGethVersion, localGethVersion)) {
-            geth.version = latestGethVersion;
+            gesc.version = latestGethVersion;
 
             // Query commit hash (first 8 characters)
             got(`https://www.ethersocial.network/download/commits_${tagName}.json`, { json: true })
@@ -52,28 +52,28 @@ gulp.task('update-nodes', (cb) => {
                     });
 
                     // For each platform/arch in clientBinaries.json
-                    _.keys(geth.platforms).forEach((platform) => {
-                        _.keys(geth.platforms[platform]).forEach((arch) => {
+                    _.keys(gesc.platforms).forEach((platform) => {
+                        _.keys(gesc.platforms[platform]).forEach((arch) => {
                             // Update URL
-                            let url = geth.platforms[platform][arch].download.url;
+                            let url = gesc.platforms[platform][arch].download.url;
                             url = url.replace(/\d+\.\d+\.\d+-[a-z0-9]{8}/, `${latestGethVersion}-${hash}`);
-                            geth.platforms[platform][arch].download.url = url;
+                            gesc.platforms[platform][arch].download.url = url;
 
                             // Update bin name (path in archive)
-                            let bin = geth.platforms[platform][arch].download.bin;
+                            let bin = gesc.platforms[platform][arch].download.bin;
                             bin = bin.replace(/\d+\.\d+\.\d+-[a-z0-9]{8}/, `${latestGethVersion}-${hash}`);
-                            geth.platforms[platform][arch].download.bin = bin;
+                            gesc.platforms[platform][arch].download.bin = bin;
 
                             // Update expected sanity-command version output
-                            geth.platforms[platform][arch].commands.sanity.output[1] =
+                            gesc.platforms[platform][arch].commands.sanity.output[1] =
                             String(latestGethVersion);
 
                             // Update md5 checksum
                             blobs.forEach((blob) => {
-                                if (String(blob.Name) === _.last(geth.platforms[platform][arch].download.url.split('/'))) {
+                                if (String(blob.Name) === _.last(gesc.platforms[platform][arch].download.url.split('/'))) {
                                     const sum = new Buffer(blob.Properties[0]['Content-MD5'][0], 'base64');
 
-                                    geth.platforms[platform][arch].download.md5 = sum.toString('hex');
+                                    gesc.platforms[platform][arch].download.md5 = sum.toString('hex');
                                 }
                             });
                         });

@@ -1,49 +1,49 @@
 {
     "clients": {
-        "Gesn": {
-            "version": "0.2.0",
+        "Gesc": {
+            "version": "0.2.1",
             "platforms": {
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "https://www.ethersocial.net/download/geth-win-amd64-0.2.2.zip",
+                            "url": "https://www.ethersocial.org/download/gesc-win-amd64-2.0.1.zip",
                             "type": "zip",
-                            "md5": "2f6c7d22466b651e07fe5311b5069016",
-                            "bin": "geth-win-amd64-0.2.2\\geth.exe"
+                            "md5": "b7793b317ab4a99eb73a682bbb4f2349",
+                            "bin": "gesc-win-amd64-2.0.1\\gesc.exe"
                         },
-                        "bin": "geth.exe",
+                        "bin": "gesc.exe",
                         "commands": {
                             "sanity": {
                                 "args": [
                                     "version"
                                 ],
                                 "output": [
-                                    "Geth",
-                                    "0.2.2"
+                                    "Gesc",
+                                    "0.2.1"
                                 ]
                             }
                         }
                     },
-					"ia32": {
-					    "download": {
-					        "url": "https://www.ethersocial.net/download/geth-win-386-0.2.2.zip",
-					        "type": "zip",
-					        "md5": "76fef51abab07ac85229af698e86f492",
-					        "bin": "geth-win-386-0.2.2\\geth.exe"
-					    },
-					    "bin": "geth.exe",
-					    "commands": {
-					        "sanity": {
-					            "args": [
-					                "version"
-					            ],
-					            "output": [
-					                "Geth",
-					                "0.2.2"
-					            ]
-					        }
-					    }
-					}
+			"ia32": {
+			    "download": {
+				"url": "https://www.ethersocial.org/download/gesc-win-386-2.0.1.zip",
+				"type": "zip",
+				"md5": "c4bb654faa8c8ca94f2553808defaa71",
+				"bin": "gesc-win-386-2.0.1\\gesc.exe"
+			    },
+			    "bin": "gesc.exe",
+			    "commands": {
+				"sanity": {
+				    "args": [
+					"version"
+				    ],
+				    "output": [
+					"Gesc",
+					"0.2.1"
+				    ]
+				}
+			    }
+			}
                 }
             }
         }
