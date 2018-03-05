@@ -93,7 +93,7 @@ In the original window you can then start EtherSocialWallet with:
     $ cd esnwallet
     $ yarn dev:electron
 
-*NOTE: client-binaries (e.g. [gesc](https://github.com/ethersocial/go-ethersocial)) specified in [clientBinaries.json](https://github.com/ethersocial/esnwallet/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)*
+*NOTE: client-binaries (e.g. [geth](https://github.com/ethersocial/go-ethersocial)) specified in [clientBinaries.json](https://github.com/ethersocial/esnwallet/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)*
 
 *NOTE: use `--help` to display available options, e.g. `--loglevel debug` (or `trace`) for verbose output*
 
@@ -158,7 +158,7 @@ To run a private network you will need to set the IPC path, network id and data
 folder:
 
 ```bash
-$ yarn dev:electron --rpc ~/Library/ESN/geth.ipc --node-networkid 1234 --node-datadir ~/Library/ESN/privatenet
+$ yarn dev:electron --rpc ~/Library/Ethersocial/geth.ipc --node-networkid 1234 --node-datadir ~/Library/Ethersocial/privatenet
 ```
 
 _NOTE: since `ipcpath` is also a Mist option you do not need to also include a
