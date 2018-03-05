@@ -221,7 +221,7 @@ let menuTempl = function (webviews) {
                                 }
 
                                 if (process.platform === 'win32') {
-                                    userPath = `${Settings.appDataPath}\\ESN\\keystore`;
+                                    userPath = `${Settings.appDataPath}\\Ethersocial\\keystore`;
                                 }
                             }
 

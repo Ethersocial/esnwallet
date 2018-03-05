@@ -6,7 +6,7 @@ const fs = require('fs');
 const Web3 = require('web3');
 const shell = require('shelljs');
 const path = require('path');
-const gethPrivate = require('gesc-private');
+const gethPrivate = require('geth-private');
 const Application = require('spectron').Application;
 const chai = require('chai');
 const http = require('http');
@@ -31,15 +31,15 @@ const startGeth = function* () {
     const manager = new ClientBinaryManager(config);
     yield manager.init();
 
-    if (!manager.clients.Gesc.state.available) {
-        gethPath = manager.clients.Gesc.activeCli.fullPath;
-        console.info('Downloading gesc...');
-        const downloadedGeth = yield manager.download('Gesc');
+    if (!manager.clients.Geth.state.available) {
+        gethPath = manager.clients.Geth.activeCli.fullPath;
+        console.info('Downloading geth...');
+        const downloadedGeth = yield manager.download('Geth');
         gethPath = downloadedGeth.client.activeCli.fullPath;
-        console.info('Gesc downloaded at:', gethPath);
+        console.info('Geth downloaded at:', gethPath);
     }
 
-    const gesc = gethPrivate({
+    const geth = gethPrivate({
         gethPath,
         balance: 5,
         genesisBlock: {
@@ -55,11 +55,11 @@ const startGeth = function* () {
         },
     });
 
-    log.info('Gesc starting...');
-    yield gesc.start();
-    log.info('Gesc started');
+    log.info('Geth starting...');
+    yield geth.start();
+    log.info('Geth started');
 
-    return gesc;
+    return geth;
 };
 
 const startFixtureServer = function (serverPort) {
@@ -97,13 +97,13 @@ exports.mocha = (_module, options) => {
                 shell.rm('-rf', e);
             });
 
-            this.gesc = yield startGeth();
+            this.geth = yield startGeth();
 
             const appFileName = (options.app === 'wallet') ? 'ESNwallet' : 'Mist';
             const platformArch = `${process.platform}-${process.arch}`;
 
             let appPath;
-            const ipcProviderPath = path.join(this.gesc.dataDir, 'gesc.ipc');
+            const ipcProviderPath = path.join(this.geth.dataDir, 'gesc.ipc');
 
             switch (platformArch) {
             case 'darwin-x64':
@@ -133,7 +133,7 @@ exports.mocha = (_module, options) => {
                 args: [
                     '--loglevel', 'debug',
                     '--logfile', mistLogFile,
-                    '--node-datadir', this.gesc.dataDir,
+                    '--node-datadir', this.geth.dataDir,
                     '--rpc', ipcProviderPath,
                 ],
                 webdriverLogPath: webdriverLogDir,
@@ -222,9 +222,9 @@ exports.mocha = (_module, options) => {
                 yield this.app.stop();
             }
 
-            if (this.gesc && this.gesc.isRunning) {
-                console.log('Stopping gesc...');
-                yield this.gesc.stop();
+            if (this.geth && this.geth.isRunning) {
+                console.log('Stopping geth...');
+                yield this.geth.stop();
             }
 
             if (this.httpServer && this.httpServer.isListening) {
@@ -353,10 +353,10 @@ const Utils = {
         yield Q.delay(1000);
     },
     * startMining() {
-        yield this.gesc.consoleExec('miner.start();');
+        yield this.geth.consoleExec('miner.start();');
     },
     * stopMining() {
-        yield this.gesc.consoleExec('miner.stop();');
+        yield this.geth.consoleExec('miner.stop();');
     },
 
     * selectTab(tabId) {
