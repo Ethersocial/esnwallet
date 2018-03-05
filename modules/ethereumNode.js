@@ -77,7 +77,7 @@ class EthereumNode extends EventEmitter {
     }
 
     get isGeth() {
-        return this._type === 'geth';
+        return this._type === 'gesc';
     }
 
     get isGesc() {
