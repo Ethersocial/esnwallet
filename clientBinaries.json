@@ -4,46 +4,36 @@
             "version": "0.2.1",
             "platforms": {
                 "win": {
-                    "x64": {
-                        "download": {
-                            "url": "https://www.ethersocial.org/download/gesc-win-amd64-0.2.1.zip",
-                            "type": "zip",
-                            "md5": "f04bff6c264af48c670c4716f0060520",
-                            "bin": "gesc-win-amd64-0.2.1\\gesc.exe"
-                        },
-                        "bin": "gesc.exe",
-                        "commands": {
-                            "sanity": {
-                                "args": [
-                                    "version"
-                                ],
-                                "output": [
-                                    "Gesc",
-                                    "0.2.1"
-                                ]
-                            }
-                        }
-                    },
-			"ia32": {
-			    "download": {
-				"url": "https://www.ethersocial.org/download/gesc-win-386-0.2.1.zip",
-				"type": "zip",
-				"md5": "b68931fdac638f5812f3d36077f5a9c6",
-				"bin": "gesc-win-386-0.2.1\\gesc.exe"
-			    },
-			    "bin": "gesc.exe",
-			    "commands": {
-				"sanity": {
-				    "args": [
-					"version"
-				    ],
-				    "output": [
-					"Gesc",
-					"0.2.1"
-				    ]
-				}
-			    }
-			}
+					"x64": {
+						"download": {
+							"url": "https://www.ethersocial.org/binaries/gesc-win-amd64-0.2.1.zip",
+							"type": "zip",
+							"md5": "f04bff6c264af48c670c4716f0060520",
+							"bin": "gesc-win-amd64-0.2.1\\gesc.exe"
+						},
+						"bin": "gesc.exe",
+						"commands": {
+							"sanity": {
+								"args": ["version"],
+								"output": ["Gesc","0.2.1"]
+							}
+						}
+					},
+					"ia32": {
+						"download": {
+							"url": "https://www.ethersocial.org/binaries/gesc-win-386-0.2.1.zip",
+							"type": "zip",
+							"md5": "b68931fdac638f5812f3d36077f5a9c6",
+							"bin": "gesc-win-386-0.2.1\\gesc.exe"
+						},
+						"bin": "gesc.exe",
+						"commands": {
+							"sanity": {
+								"args": ["version"],
+								"output": ["Gesc","0.2.1"]
+							}
+						}
+					}
                 }
             }
         }
